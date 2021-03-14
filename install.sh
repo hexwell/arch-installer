@@ -1,25 +1,9 @@
 #!/bin/bash
 
-LOGFILE=log
+source base.sh
 
-# Logging
-exec 3>&1 &>$LOGFILE
-
-# e - fail on non-zero exit codes
-# u - fail on undeclared variables
-# x - echo commands
-# o pipefail - fail early in pipelines
-set -euxo pipefail
-
-# ------------ CONFIGURATION ------------
+# Config
 source install.config.sh
-# ------------ ************* ------------
-
-out() {
-    echo $1 >&3
-}
-
-trap "out '[!] An error occurred.'" ERR
 
 if [ "$EUID" -ne 0 ]; then
     out "[!] Please run as root."

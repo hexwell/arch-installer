@@ -1,5 +1,4 @@
-# u - fail on undeclared variables
-set -u
+source conf.sh
 
 # --- MANDATORY ---
 

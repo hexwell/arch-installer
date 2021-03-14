@@ -1,4 +1,4 @@
-set -u
+source conf.sh
 
 # --- MANDATORY ---
 

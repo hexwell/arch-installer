@@ -1,0 +1,1 @@
+shred -zu install.config.sh

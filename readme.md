@@ -21,3 +21,7 @@ cd arch-installer
 ```bash
 ./install.sh
 ```
+
+## TODO
+
+- Divide installation script in parts (bootstrapping (keyboard, checks, time), network, partitioning, encryption, system installation (kernel, base, bootloader), packages and customization)

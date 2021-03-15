@@ -1,11 +1,13 @@
 #!/bin/bash
 
-DEBUG=false
+LOGFILE=log
 
 source base.sh
 
 # Config
 source usb.config.sh
+
+DEBUG=false
 
 isodir=iso
 versiondelimiter='-'

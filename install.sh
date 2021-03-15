@@ -1,5 +1,7 @@
 #!/bin/bash
 
+LOGFILE=log
+
 source base.sh
 
 # Config

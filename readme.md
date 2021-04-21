@@ -25,3 +25,5 @@ cd arch-installer
 ## TODO
 
 - Divide installation script in parts (bootstrapping (keyboard, checks, time), network, partitioning, encryption, system installation (kernel, base, bootloader), packages and customization)
+- Create a unique "glue" installation script, that contains imports of other sections of the installer, and that can be customised to fit specific installation needs.
+In this way for example if you only need to configure an already installed os you can still use those parts of the script.

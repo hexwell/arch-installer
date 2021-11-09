@@ -13,4 +13,4 @@ out() {
     echo $1 >&3
 }
 
-trap "out '[!] An error occurred.'" ERR
+trap "if [ \$? -ne 0 ]; then out '[!] An error occurred.'; fi" EXIT

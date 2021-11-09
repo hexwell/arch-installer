@@ -1,0 +1,1 @@
+shred -zu conf/install.bash

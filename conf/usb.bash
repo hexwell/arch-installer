@@ -1,4 +1,6 @@
-source conf.sh
+#!/bin/bash
+
+source ../lib/conf.bash
 
 # --- MANDATORY ---
 

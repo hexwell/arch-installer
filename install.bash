@@ -31,7 +31,7 @@ source ntp.bash
 # Disk setup
 
 source format-disk.bash
-source encryption.bash
+source disk-encryption.bash
 
 
 # System Installation

@@ -7,19 +7,19 @@ git clone https://github.com/hexwell/arch-installer.git
 cd arch-installer
 ```
 
-- Edit `usb.config.sh` appropriately.
+- Edit `conf/usb.bash` appropriately.
 
 ```bash
-./usb.sh
+./usb.bash
 ```
 
 ## Install
 
-- Edit `install.config.sh` on the created USB appropriately.
+- Edit `conf/install.bash` on the created USB appropriately.
 - Boot the USB using UEFI.
 
 ```bash
-./install.sh
+./install.bash
 ```
 
 ## TODO

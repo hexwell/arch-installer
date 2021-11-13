@@ -9,8 +9,8 @@ DEBUG=false
 
 isodir=iso
 versiondelimiter='-'
-fileprefix="archlinux$versiondelimiter"
-filepostfix="$versiondelimiter""x86_64.iso"
+fileprefix="archlinux"$versiondelimiter
+filepostfix=$versiondelimiter"x86_64.iso"
 
 cd modules/usb
 

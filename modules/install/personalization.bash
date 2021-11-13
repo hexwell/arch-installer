@@ -16,4 +16,4 @@ arch-chroot /mnt locale-gen
 
 # TODO edit /etc/hostname
 
-arch-chroot /mnt passwd
+arch-chroot /mnt echo "$PW" | passwd --stdin

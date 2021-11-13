@@ -1,10 +1,8 @@
 #!/bin/bash
 
-set +x
-
 unset TMUX
 
-tmux new-session -d -s arch "sleep 1; ""$1"
+tmux new-session -d -s arch "bash <(echo 'sleep 1; ""$1""; read -p \"Press enter to exit...\"')"
 
 tmux split-window -h -t arch:0 "echo > log && tail -f log"
 tmux select-pane -t arch:0.0

@@ -2,25 +2,37 @@
 
 source lib/conf.bash
 
+# Module: Keyboard Layout
 # --- MANDATORY ---
 
 KEYBOARD=it
+
+
+# Module: Disk Encryption
+# --- MANDATORY ---
+
 LUKSPW=x
-HOST=x
-USER=x
 
 
 # Module: Ethernet
+# --- MANDATORY ---
 
-EDEV=eth0
-EADDR=172.16.0.2/16
-EGW=172.16.0.1
+EADDR=x.x.x.x/x
+EGW=x.x.x.x
 
 
 # Module: WiFi 
+# --- MANDATORY ---
 
 WSSID=x
 WPASS=x
+
+
+# Module: Personalization
+# --- MANDATORY ---
+
+HOST=x
+PW=x
 
 
 # --- OPTIONALS ---

@@ -11,4 +11,8 @@ else
 fi
 
 out "[+] Selected '$device'"
-read -p "Press enter to continue..." 2>&3
+read -p "Press enter to continue..." 2>&$user_stdout
+
+# Clear previous line and leave caret there
+echo -e "\e[1A\e[K                          " >&$user_stdout
+echo -e -n "\e[1A\e[K" >&$user_stdout

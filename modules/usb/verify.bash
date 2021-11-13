@@ -1,6 +1,9 @@
 #!/bin/bash
 
 out '[.] Verifing signature...'
+
+cd ../..
+
 set +e
 gpg --keyserver hkp://pool.sks-keyservers.net --keyserver-options auto-key-retrieve --verify $sigfile
 
@@ -10,4 +13,7 @@ else
     out '[!] Invalid signature.'
     exit 1
 fi
+
 set -e
+
+cd modules/usb

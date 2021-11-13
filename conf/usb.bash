@@ -4,7 +4,7 @@ source lib/conf.bash
 
 # --- MANDATORY ---
 
-MIRROR=https://archmirror.it
+MIRROR=https://archmirror.it/repos
 
 
 # --- OPTIONALS ---

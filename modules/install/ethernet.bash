@@ -1,5 +1,7 @@
 #!/bin/bash
 
+out '[.] Connecting to Ethernet.'
+
 DEV="eth0"
 ADDR="172.16.0.2/16"
 GW="172.16.0.1"

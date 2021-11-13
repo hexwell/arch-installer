@@ -1,5 +1,7 @@
 #!/bin/bash
 
+out '[.] Setting up fstab.'
+
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # TODO some edits to fstab

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+out '[.] Applying personalizations.'
+
 TZ="Europe/Rome"
 
 arch-chroot /mnt ln -sf /usr/share/zoneinfo/$TZ /etc/localtime

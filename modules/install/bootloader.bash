@@ -1,5 +1,7 @@
 #!/bin/bash
 
+out '[.] Setting up bootloader.'
+
 arch-chroot /mnt cp -r /boot/. /efi
 
 DEV_UUID="..."

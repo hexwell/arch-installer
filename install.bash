@@ -40,3 +40,5 @@ source fstab.bash
 source personalization.bash
 source mkinitcpio.bash
 source bootloader.bash
+
+out '[+] Done.'

@@ -5,8 +5,8 @@
 # TODO Mind that in the log there's also the wifi pw, so either that has to change or the log has to be deleted anyways.
 
 out '[.] Setting up disk encryption.'
-echo -n $LUKSPW | cryptsetup -v -d - luksFormat $device"2"
-echo -n $LUKSPW | cryptsetup -d - open $device"2" cryptroot
+echo -n "$LUKSPW" | cryptsetup -v -d - luksFormat "$device""2"
+echo -n "$LUKSPW" | cryptsetup -d - open "$device""2" cryptroot
 
 mkfs.ext4 /dev/mapper/cryptroot
 mount /dev/mapper/cryptroot /mnt
@@ -18,7 +18,7 @@ mount /dev/mapper/cryptroot /mnt
 
 mkdir /mnt/boot
 
-mkfs.fat -F32 $device"1"
-mount $device"1" /mnt/boot
+mkfs.fat -F32 "$device""1"
+mount "$device""1" /mnt/boot
 
 out '[+] Disk ready.'

@@ -3,7 +3,7 @@
 set +u
 if [ -v DEVICE ]; then
     set -u
-    device=$DEVICE
+    device="$DEVICE"
 else
     set -u
     devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac)

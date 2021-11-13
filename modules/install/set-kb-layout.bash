@@ -1,4 +1,4 @@
 #!/bin/bash
 
-loadkeys $KEYBOARD
+loadkeys "$KEYBOARD"
 out "[+] Keyboard set to $KEYBOARD."

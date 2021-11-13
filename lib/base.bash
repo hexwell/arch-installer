@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Logging
-exec {user_stdout}>&1 &>$LOGFILE
+exec {user_stdout}>&1 &>"$LOGFILE"
 
 # e - fail on non-zero exit codes
 # u - fail on undeclared variables

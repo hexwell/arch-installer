@@ -9,8 +9,8 @@ DEBUG=false
 
 isodir=iso
 versiondelimiter='-'
-fileprefix="archlinux"$versiondelimiter
-filepostfix=$versiondelimiter"x86_64.iso"
+fileprefix="archlinux""$versiondelimiter"
+filepostfix="$versiondelimiter""x86_64.iso"
 
 cd modules/usb
 
@@ -18,9 +18,9 @@ source ../check-root.bash
 source ../select-device.bash
 source get-version.bash
 
-path=$isodir/$version
-isofile=$fileprefix$version$filepostfix
-sigfile=$isofile.sig
+path="$isodir""/""$version"
+isofile="$fileprefix""$version""$filepostfix"
+sigfile="$isofile.sig"
 
 source download.bash
 source verify.bash

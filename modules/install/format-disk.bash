@@ -19,4 +19,4 @@ echo       # Default number
 echo       # Default first sector
 echo       # Default last sector
 echo w     # Write
-) | fdisk $device
+) | fdisk "$device"

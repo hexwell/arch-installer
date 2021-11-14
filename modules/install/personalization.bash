@@ -2,12 +2,9 @@
 
 out '[.] Applying personalizations.'
 
-TZ="Europe/Rome"
-
 arch-chroot /mnt ln -sf /usr/share/zoneinfo/""$TZ"" /etc/localtime
 arch-chroot /mnt hwclock --systohc
 
-LANG=en_US.UTF-8
 LOCALE="$LANG"" UTF-8"
 
 sed -i "/#""$LOCALE""/s/^#//" /mnt/etc/locale.gen

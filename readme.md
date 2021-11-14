@@ -16,6 +16,7 @@ cd arch-installer
 ## Install
 
 - Edit `conf/install.bash` on the created USB appropriately.
+- Edit `modules/install/pacstrap.bash` on the created USB to add/remove installation of packages to your taste.
 - Boot the USB using UEFI.
 
 ```bash

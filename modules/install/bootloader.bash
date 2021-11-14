@@ -5,10 +5,9 @@ out '[.] Setting up bootloader.'
 DEV_UUID=$(blkid -s UUID -o value "$device"2)
 
 # 8192
-dd if=/dev/zero of=/mnt/swapfile bs=1M count=512 status=progress
+dd if=/dev/zero of=/mnt/swapfile bs=1M count=512
 arch-chroot /mnt chmod 600 /swapfile
 arch-chroot /mnt mkswap /swapfile
-arch-chroot /mnt swapon /swapfile
 
 echo >> /mnt/etc/fstab
 echo "# swap" >> /mnt//etc/fstab

@@ -10,10 +10,10 @@ arch-chroot /mnt chmod 600 /swapfile
 arch-chroot /mnt mkswap /swapfile
 arch-chroot /mnt swapon /swapfile
 
-echo >> /etc/fstab
-echo "# swap" >> /etc/fstab
-echo "/swapfile none swap defaults 0 0" >> /etc/fstab
-echo >> /etc/fstab
+echo >> /mnt/etc/fstab
+echo "# swap" >> /mnt//etc/fstab
+echo "/swapfile none swap defaults 0 0" >> /mnt//etc/fstab
+echo >> /mnt//etc/fstab
 
 filefrag=$(arch-chroot /mnt filefrag -v /swapfile)
 

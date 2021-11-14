@@ -19,4 +19,4 @@ filefrag=$(arch-chroot /mnt filefrag -v /swapfile)
 
 OFFSET=$(echo "$filefrag" | awk '$1=="0:" {print substr($4, 1, length($4)-2)}')
 
-efibootmgr --disk "$device" --part 1 --create --label "arch linux" --loader /vmlinuz-linux --unicode "cyrptdevice=UUID=""$DEV_UUID"":cryptroot root=/dev/mapper/cryptroot rw initrd=\intel-ucode.img initrd=\initramfs-linux.img resume=/dev/mapper/cryptroot resume_offset=""$OFFSET" --verbose
+efibootmgr --disk "$device" --part 1 --create --label "arch linux" --loader /vmlinuz-linux --unicode "cryptdevice=UUID=""$DEV_UUID"":cryptroot root=/dev/mapper/cryptroot rw initrd=\intel-ucode.img initrd=\initramfs-linux.img resume=/dev/mapper/cryptroot resume_offset=""$OFFSET" --verbose

@@ -24,3 +24,5 @@ echo "$HOST" > /mnt/etc/hostname
 echo >> /mnt/etc/hostname
 
 arch-chroot /mnt echo -n root:$PW | chpasswd
+
+arch-chroot /mnt systemctl enable NetworkManager

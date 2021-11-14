@@ -5,13 +5,13 @@ out '[.] Running mkinitcpio.'
 hooks=$(cat /mnt/etc/mkinitcpio.conf | grep '^HOOKS')
 
 add() {
-	set +e
-	
-	if ! echo $hooks | grep $1; then
-		hooks=$(echo $hooks | sed "s/)/ ""$1"")/")
-	fi
+    set +e
+    
+    if ! echo $hooks | grep $1; then
+        hooks=$(echo $hooks | sed "s/)/ ""$1"")/")
+    fi
 
-	set -e
+    set -e
 }
 
 add keyboard

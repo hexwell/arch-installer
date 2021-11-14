@@ -23,4 +23,4 @@ echo >> /mnt/etc/vconsole.conf
 echo "$HOST" > /mnt/etc/hostname
 echo >> /mnt/etc/hostname
 
-arch-chroot /mnt echo $PW | passwd --stdin
+arch-chroot /mnt echo root:$PW | chpasswd

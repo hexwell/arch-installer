@@ -2,7 +2,7 @@
 
 source lib/conf.bash
 
-# Module: Keyboard Layout
+
 # --- MANDATORY ---
 
 KEYBOARD=it

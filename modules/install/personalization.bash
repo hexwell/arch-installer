@@ -4,16 +4,23 @@ out '[.] Applying personalizations.'
 
 TZ="Europe/Rome"
 
-arch-chroot /mnt ln -sf /usr/share/zoneinfo/$TZ /etc/localtime
+arch-chroot /mnt ln -sf /usr/share/zoneinfo/""$TZ"" /etc/localtime
 arch-chroot /mnt hwclock --systohc
 
-# TODO edit /etc/locale.gen
+LANG=en_US.UTF-8
+LOCALE="$LANG"" UTF-8"
+
+sed -i "/#""$LOCALE""/s/^#//" /mnt/etc/locale.gen
+
 arch-chroot /mnt locale-gen
 
-# TODO edit /etc/locale.conf
+echo "LANG=""$LANG" > /mnt/etc/locale.conf
+echo >> /mnt/etc/locale.conf
 
-# TODO edit /etc/vconsole.conf
+echo "KEYMAP=""$KEYBOARD" > /mnt/etc/vconsole.conf
+echo >> /mnt/etc/vconsole.conf
 
-# TODO edit /etc/hostname
+echo "$HOST" > /mnt/etc/hostname
+echo >> /mnt/etc/hostname
 
-arch-chroot /mnt echo "$PW" | passwd --stdin
+arch-chroot /mnt echo $PW | passwd --stdin

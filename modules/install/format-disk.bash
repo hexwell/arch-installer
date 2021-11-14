@@ -1,6 +1,6 @@
 #!/bin/bash
 
-out "[.] Using device $device"
+out "[.] Using device '$device'."
 
 out '[.] Formatting.'
 

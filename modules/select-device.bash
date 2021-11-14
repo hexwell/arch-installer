@@ -10,7 +10,7 @@ else
     device=$(dialog --keep-tite --stdout --menu "Select installation disk" 0 0 0 ${devicelist}) || exit 1
 fi
 
-out "[+] Selected '$device'"
+out "[+] Selected '$device'."
 read -p "Press enter to continue..." 2>&$user_stdout
 
 # Clear previous line and leave caret there

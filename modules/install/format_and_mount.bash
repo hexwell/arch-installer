@@ -26,6 +26,8 @@ local boot_partition_device=$boot_partition_disk_device$boot_partition_number
 mkfs.fat -F32 "$boot_partition_device"
 mount "$boot_partition_device" $INSTALLATION_MOUNTPOINT/boot
 
+out '[+] Disk ready.'
+
 }
 
 format_and_mount_module

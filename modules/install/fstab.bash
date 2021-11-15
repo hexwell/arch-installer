@@ -5,5 +5,5 @@
 
 out '[.] Setting up fstab.'
 
-echo >> $INSTALLER_MOUNTPOINT/etc/fstab
-genfstab -U $INSTALLER_MOUNTPOINT | sed "s/ *\t/ /g" >> $INSTALLER_MOUNTPOINT/etc/fstab
+echo >> $INSTALLATION_MOUNTPOINT/etc/fstab
+genfstab -U $INSTALLATION_MOUNTPOINT | sed "s/ *\t/ /g" >> $INSTALLATION_MOUNTPOINT/etc/fstab

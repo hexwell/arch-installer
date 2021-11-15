@@ -23,11 +23,9 @@ if cat /proc/cpuinfo | grep -m 1 AuthenticAMD; then
 	local ucode=amd-ucode
 fi
 
-set +u
-if ! [ -v ucode ]; then
+if ! [ -z "$ucode" ]; then
 	ucode_kernel_param="initrd=\\""$ucode"".img "
 fi
-set -u
 
 
 local network=""
@@ -39,7 +37,7 @@ fi
 set -u
 
 
-pacstrap $INSTALLER_MOUNTPOINT base linux linux-firmware $ucode $network networkmanager
+pacstrap $INSTALLATION_MOUNTPOINT base linux linux-firmware $ucode $network networkmanager
 
 out '[+] OS installed.'
 

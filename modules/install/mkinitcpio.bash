@@ -7,7 +7,7 @@ mkinitcpio_module() {
 
 out '[.] Running mkinitcpio.'
 
-local hooks=$(cat $INSTALLER_MOUNTPOINT/etc/mkinitcpio.conf | grep '^HOOKS')
+hooks=$(cat $INSTALLATION_MOUNTPOINT/etc/mkinitcpio.conf | grep '^HOOKS')
 
 add() {
     set +e
@@ -24,9 +24,9 @@ add keymap
 add encrypt
 add resume
 
-sed -i "/^HOOKS/c""$hooks" $INSTALLER_MOUNTPOINT/etc/mkinitcpio.conf
+sed -i "/^HOOKS/c""$hooks" $INSTALLATION_MOUNTPOINT/etc/mkinitcpio.conf
 
-arch-chroot $INSTALLER_MOUNTPOINT mkinitcpio -P
+arch-chroot $INSTALLATION_MOUNTPOINT mkinitcpio -P
 
 }
 

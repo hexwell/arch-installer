@@ -21,6 +21,6 @@ if [ -v WIFI ]; then
 fi
 set -u
 
-pacstrap /mnt base linux linux-firmware $ucode $network networkmanager
+pacstrap $INSTALLER_MOUNTPOINT base linux linux-firmware $ucode $network networkmanager
 
 out '[+] OS installed.'

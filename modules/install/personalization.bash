@@ -2,30 +2,30 @@
 
 out '[.] Applying personalizations.'
 
-arch-chroot /mnt ln -sf /usr/share/zoneinfo/""$TZ"" /etc/localtime
-arch-chroot /mnt hwclock --systohc
+arch-chroot $INSTALLER_MOUNTPOINT ln -sf /usr/share/zoneinfo/""$TZ"" /etc/localtime
+arch-chroot $INSTALLER_MOUNTPOINT hwclock --systohc
 
 LOCALE="$LANG"" UTF-8"
 
-sed -i "/#""$LOCALE""/s/^#//" /mnt/etc/locale.gen
+sed -i "/#""$LOCALE""/s/^#//" $INSTALLER_MOUNTPOINT/etc/locale.gen
 
-arch-chroot /mnt locale-gen
+arch-chroot $INSTALLER_MOUNTPOINT locale-gen
 
-echo "LANG=""$LANG" > /mnt/etc/locale.conf
-echo >> /mnt/etc/locale.conf
+echo "LANG=""$LANG" > $INSTALLER_MOUNTPOINT/etc/locale.conf
+echo >> $INSTALLER_MOUNTPOINT/etc/locale.conf
 
-echo "KEYMAP=""$KEYBOARD" > /mnt/etc/vconsole.conf
-echo >> /mnt/etc/vconsole.conf
+echo "KEYMAP=""$KEYBOARD" > $INSTALLER_MOUNTPOINT/etc/vconsole.conf
+echo >> $INSTALLER_MOUNTPOINT/etc/vconsole.conf
 
-echo "$HOST" > /mnt/etc/hostname
-echo >> /mnt/etc/hostname
+echo "$HOST" > $INSTALLER_MOUNTPOINT/etc/hostname
+echo >> $INSTALLER_MOUNTPOINT/etc/hostname
 
-echo root:$PW | arch-chroot /mnt chpasswd
+echo root:$PW | arch-chroot $INSTALLER_MOUNTPOINT chpasswd
 
-arch-chroot /mnt systemctl enable NetworkManager
+arch-chroot $INSTALLER_MOUNTPOINT systemctl enable NetworkManager
 
 set +u
 if [ -v WIFI ]; then
-	arch-chroot /mnt systemctl enable iwd
+	arch-chroot $INSTALLER_MOUNTPOINT systemctl enable iwd
 fi
 set -u

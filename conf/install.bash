@@ -6,6 +6,8 @@ source lib/conf.bash
 # --- MANDATORY ---
 
 KEYBOARD=it
+INSTALLER_MOUNTPOINT=/mnt
+DMCRYPTNAME=cryptroot
 
 
 # Module: Disk Encryption
@@ -19,6 +21,8 @@ LUKSPW=x
 
 EADDR=x.x.x.x/x
 EGW=x.x.x.x
+DNS_A=1.1.1.1
+DNS_B=8.8.4.4
 
 
 # Module: WiFi

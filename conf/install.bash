@@ -5,15 +5,15 @@ source lib/conf.bash
 
 # --- MANDATORY ---
 
-KEYBOARD=it
-INSTALLER_MOUNTPOINT=/mnt
-DMCRYPTNAME=cryptroot
+LOGFILE=log
+INSTALLATION_MOUNTPOINT=/mnt
+DEVICE=/dev/sdX
 
 
-# Module: Disk Encryption
+# Module: Set KB Layout
 # --- MANDATORY ---
 
-LUKSPW=x
+KEYBOARD=it
 
 
 # Module: Ethernet
@@ -32,15 +32,17 @@ WSSID=x
 WPASS=x
 
 
+# Module: Disk Encryption
+# --- MANDATORY ---
+
+LUKSPASS=x
+DMNAME=cryptroot
+
+
 # Module: Personalization
 # --- MANDATORY ---
 
 TZ=Europe/Rome
 LANG=en_US.UTF-8
 HOST=x
-PW=x
-
-
-# --- OPTIONALS ---
-
-# DEVICE=/dev/sdX
+PASS=x

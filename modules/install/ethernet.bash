@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# IMPORTS:
+#   out
+#   EADDR
+#   EGW
+#   DNS_A
+#   DNS_B
+
 out '[.] Connecting to Ethernet.'
 
 ip addr add "$EADDR" broadcast + dev eth0

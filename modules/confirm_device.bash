@@ -1,14 +1,18 @@
 #!/bin/bash
 
+# IMPORTS:
+#   out
+#   user_stdout
+#
+# Either:
+#   DEVICE
+#   device
+
 set +u
 if [ -v DEVICE ]; then
-    set -u
     device="$DEVICE"
-else
-    set -u
-    devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac)
-    device=$(dialog --keep-tite --stdout --menu "Select installation disk" 0 0 0 ${devicelist}) || exit 1
 fi
+set -u
 
 out "[+] Selected '$device'."
 read -p "Press enter to continue..." 2>&$user_stdout

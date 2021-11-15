@@ -14,9 +14,10 @@ filepostfix="$versiondelimiter""x86_64.iso"
 
 cd modules/usb
 
-source ../check-root.bash
-source ../select-device.bash
-source get-version.bash
+source ../check_root.bash
+source select_device.bash
+source ../confirm_device.bash
+source get_version.bash
 
 path="$isodir""/""$version"
 isofile="$fileprefix""$version""$filepostfix"

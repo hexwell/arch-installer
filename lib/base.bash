@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# IMPORTS:
+#   LOGFILE
+#
+# EXPORTS:
+#   out
+#   user_stdout
+
 # Logging
 exec {user_stdout}>&1 &>"$LOGFILE"
 

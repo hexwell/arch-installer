@@ -12,8 +12,6 @@ source lib/base.bash
 #   path : Path of Arch ISO on the server
 #   sigfile : Arch ISO signature filename
 
-DEBUG=false
-
 isodir=iso
 versiondelimiter='-'
 fileprefix="archlinux""$versiondelimiter"

@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# IMPORTS:
+#   out
+#   MIRROR
+#   isofile
+#   path
+#   sigfile
+#   user_stdout
+
 out '[.] Downloading...'
 
 cd ../..

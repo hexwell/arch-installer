@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# IMPORTS:
+# Optionals:
+#   DEVICE
+#
+# EXPORTS:
+#   device : Installation target device
+
 set +u
 if ! [ -v DEVICE ]; then
     set -u

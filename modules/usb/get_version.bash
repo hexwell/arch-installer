@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# IMPORTS:
+#   out
+#   MIRROR
+#   isodir
+#   fileprefix
+#   filepostfix
+#   versiondelimiter
+#
+# Optionals:
+#   VERSION
+#
+# EXPORTS:
+#   version : Arch ISO version
+
 set +u
 if [ -v VERSION ]; then
     set -u

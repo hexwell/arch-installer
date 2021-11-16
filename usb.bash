@@ -1,9 +1,16 @@
 #!/bin/bash
 
-LOGFILE=log
-
 source conf/usb.bash
 source lib/base.bash
+
+# EXPORTS:
+#   isodir : Directory of the Arch ISO on the server
+#   fileprefix : Prefix of the Arch ISO filename
+#   filepostfix : Postfix of the Arch ISO filename
+#   versiondelimiter : Delimiter of the Arch ISO filename
+#   isofile  : Arch ISO filename
+#   path : Path of Arch ISO on the server
+#   sigfile : Arch ISO signature filename
 
 DEBUG=false
 

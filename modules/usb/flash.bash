@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# IMPORTS:
+#   out
+#   device
+#   isofile
+#   user_stdout
+
 out "[.] Using device $device"
 
 set +e

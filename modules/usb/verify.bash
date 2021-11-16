@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# IMPORTS:
+#   out
+#   sigfile
+
 out '[.] Verifing signature...'
 
 cd ../..

@@ -1,4 +1,5 @@
 from os.path import join
+from sys import argv
 
 
 def msg(file, line, message):
@@ -92,7 +93,7 @@ def analyze(module, variables):
                 action = warning if optionals else error
 
                 if variable not in variables:
-                    action(module, no, f"Import of variable '{variable}' not satisfied.")
+                    action(module, no, f"Import of {'optional' if optionals else ''} variable '{variable}' not satisfied.")
 
             elif mode == 'imports.either':
                 if check_indent(indent, blockline):
@@ -134,18 +135,22 @@ def analyze(module, variables):
                 either = []
 
 
-with open('install.bash') as f:
-    lines = f.readlines()
+def main():
+    wd = '.'
+    variables = set()
+
+    analyze(argv[1], variables)
+
+    with open(argv[1]) as f:
+        for line in f:
+            if line.startswith('source'):
+                module = join(wd, line[len('source '):].replace('/', '\\').strip())
+
+                analyze(module, variables)
+
+            elif line.startswith('cd'):
+                wd = join(wd, line[len('cd '):].strip().replace('/', '\\'))
 
 
-wd = '.'
-variables = set()
-
-for line in lines:
-    if line.startswith('source'):
-        module = join(wd, line[len('source '):].replace('/', '\\').strip())
-
-        analyze(module, variables)
-
-    elif line.startswith('cd'):
-        wd = join(wd, line[len('cd '):].strip().replace('/', '\\'))
+if __name__ == '__main__':
+    main()

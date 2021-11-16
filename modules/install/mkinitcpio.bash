@@ -3,7 +3,7 @@
 mkinitcpio_module() {
 
 # IMPORTS:
-#   INSTALLATION_MOUNTPOINT : mountpoint of the new installation
+#   INSTALLATION_MOUNTPOINT
 
 out '[.] Running mkinitcpio.'
 

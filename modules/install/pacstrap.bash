@@ -3,13 +3,13 @@
 pacstrap_module() {
 
 # IMPORTS:
-#   INSTALLATION_MOUNTPOINT : mountpoint of the new installation
+#   INSTALLATION_MOUNTPOINT
 #
 # Optionals:
-#   WIFI : set if WiFi is required
+#   enable_wifi
 #
 # EXPORTS:
-#   ucode_kernel_param
+#   ucode_kernel_param : Microcode kernel parameter
 
 out '[.] Installing OS...'
 
@@ -31,7 +31,7 @@ fi
 local network=""
 
 set +u
-if [ -v WIFI ]; then
+if [ -v enable_wifi ]; then
 	local network="iwd"
 fi
 set -u

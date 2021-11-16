@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # IMPORTS:
-#  KEYBOARD
-#  out
+#   KEYBOARD
+#   out
 
 loadkeys "$KEYBOARD"
 out "[+] Keyboard set to $KEYBOARD."

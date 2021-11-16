@@ -4,9 +4,12 @@
 #   out
 #   user_stdout
 #
-# Either:
-#   DEVICE
-#   device
+#   Either:
+#     DEVICE
+#     device
+#
+# EXPORTS:
+#   override device : Installation target device
 
 set +u
 if [ -v DEVICE ]; then

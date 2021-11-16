@@ -4,8 +4,8 @@
 #   LOGFILE
 #
 # EXPORTS:
-#   out
-#   user_stdout
+#   out : Log function
+#   user_stdout : User stdout file descriptor
 
 # Logging
 exec {user_stdout}>&1 &>"$LOGFILE"

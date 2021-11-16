@@ -4,13 +4,13 @@ disk_encryption_module() {
 
 # IMPORTS:
 #   out
-#   LUKSPASS : LUKS encryption passphrase
-#   DMNAME : device mapper name
-#   root_partition_device : the device of the root partition
+#   LUKSPASS
+#   DMNAME
+#   root_partition_device
 #
 # EXPORTS:
-#   encryption_kernel_param
-#   override root_partition_device : the device of the root partition
+#   encryption_kernel_param : LUKS disk encryption kernel parameter
+#   override root_partition_device : Device of the root partition
 
 
 # TODO mind that if partitions exist this is interactive.

@@ -4,10 +4,10 @@ format_and_mount_module() {
 
 # IMPORTS:
 #   out
-#   root_partition_device : the device of the root partition
-#   INSTALLATION_MOUNTPOINT : mountpoint of the new installation
-#   boot_partition_disk_device : the device of the boot partition disk
-#   boot_partition_number : the boot partition number
+#   root_partition_device
+#   INSTALLATION_MOUNTPOINT
+#   boot_partition_disk_device
+#   boot_partition_number
 
 out '[.] Formatting.'
 

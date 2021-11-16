@@ -2,12 +2,12 @@
 
 # IMPORTS:
 #   out
-#   device : the disk device to format
+#   device
 #
 # EXPORTS:
-#   boot_partition_disk_device : the device of the boot partition disk
-#   boot_partition_number : the boot partition number
-#   root_partition_device : the device of the root partition
+#   boot_partition_disk_device : Device of the boot partition disk
+#   boot_partition_number : Boot partition number
+#   root_partition_device : Device of the root partition
 
 out "[.] Using device '$device'."
 

@@ -3,9 +3,9 @@
 bootloader_module() {
 
 # IMPORTS:
-#   boot_partition_disk_device : the device of the boot partition disk
-#   boot_partition_number : the boot partition number
-#   root_partition_device : the device of the root partition
+#   boot_partition_disk_device
+#   boot_partition_number
+#   root_partition_device
 #
 # Optionals:
 #   encryption_kernel_param

@@ -3,11 +3,15 @@
 personalization_module() {
 
 # IMPORTS:
-#   INSTALLATION_MOUNTPOINT : mountpoint of the new installation
-#   PASS : the root passphrase
+#   INSTALLATION_MOUNTPOINT
+#   TZ
+#   LANG
+#   KEYBOARD
+#   HOST
+#   PASS
 #
 # Optionals:
-#   WIFI : set if WiFi is required
+#   enable_wifi
 
 out '[.] Applying personalizations.'
 
@@ -34,7 +38,7 @@ echo root:$PASS | arch-chroot $INSTALLATION_MOUNTPOINT chpasswd
 arch-chroot $INSTALLATION_MOUNTPOINT systemctl enable NetworkManager
 
 set +u
-if [ -v WIFI ]; then
+if [ -v enable_wifi ]; then
 	arch-chroot $INSTALLATION_MOUNTPOINT systemctl enable iwd
 fi
 set -u

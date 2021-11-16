@@ -3,11 +3,11 @@
 swap_module() {
 
 # IMPORTS:
-#   INSTALLATION_MOUNTPOINT : mountpoint of the new installation
-#   root_partition_device : the device of the root partition
+#   INSTALLATION_MOUNTPOINT
+#   root_partition_device
 #
 # EXPORTS:
-#   resume_kernel_param
+#   resume_kernel_params : Resume kernel parameter to enable hibernation
 
 out '[.] Setting up swap...'
 

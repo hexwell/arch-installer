@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # IMPORTS:
-#   INSTALLATION_MOUNTPOINT : mountpoint of the new installation
+#   INSTALLATION_MOUNTPOINT
 
 out '[.] Setting up fstab.'
 

@@ -15,11 +15,11 @@ out '[.] Installing OS...'
 
 local ucode=""
 
-if cat /proc/cpuinfo | grep -m 1 GenuineIntel; then
+if grep -m 1 GenuineIntel /proc/cpuinfo; then
 	local ucode=intel-ucode
 fi
 
-if cat /proc/cpuinfo | grep -m 1 AuthenticAMD; then
+if grep -m 1 AuthenticAMD /proc/cpuinfo; then
 	local ucode=amd-ucode
 fi
 

@@ -7,7 +7,7 @@ mkinitcpio_module() {
 
 out '[.] Running mkinitcpio.'
 
-hooks=$(cat $INSTALLATION_MOUNTPOINT/etc/mkinitcpio.conf | grep '^HOOKS')
+hooks=$(grep '^HOOKS' $INSTALLATION_MOUNTPOINT/etc/mkinitcpio.conf)
 
 add() {
     set +e

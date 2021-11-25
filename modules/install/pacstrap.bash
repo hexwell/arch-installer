@@ -13,7 +13,7 @@ pacstrap_module() {
 
 out '[.] Installing OS...'
 
-ucode=""
+local ucode=""
 
 if cat /proc/cpuinfo | grep -m 1 GenuineIntel; then
 	local ucode=intel-ucode
@@ -23,7 +23,7 @@ if cat /proc/cpuinfo | grep -m 1 AuthenticAMD; then
 	local ucode=amd-ucode
 fi
 
-if ! [ -z "$ucode" ]; then
+if ! [[ -z "$ucode" ]]; then
 	ucode_kernel_param="initrd=\\""$ucode"".img "
 fi
 
@@ -31,7 +31,7 @@ fi
 local network=""
 
 set +u
-if [ -v enable_wifi ]; then
+if [[ -v enable_wifi ]]; then
 	local network="iwd"
 fi
 set -u

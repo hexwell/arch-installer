@@ -12,7 +12,7 @@
 #   override device : Installation target device
 
 set +u
-if [ -v DEVICE ]; then
+if [[ -v DEVICE ]]; then
     device="$DEVICE"
 fi
 set -u

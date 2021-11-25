@@ -15,7 +15,7 @@
 #   version : Arch ISO version
 
 set +u
-if [ -v VERSION ]; then
+if [[ -v VERSION ]]; then
     set -u
     version="$VERSION"
 else

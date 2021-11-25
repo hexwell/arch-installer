@@ -38,7 +38,7 @@ echo root:$PASS | arch-chroot $INSTALLATION_MOUNTPOINT chpasswd
 arch-chroot $INSTALLATION_MOUNTPOINT systemctl enable NetworkManager
 
 set +u
-if [ -v enable_wifi ]; then
+if [[ -v enable_wifi ]]; then
 	arch-chroot $INSTALLATION_MOUNTPOINT systemctl enable iwd
 fi
 set -u

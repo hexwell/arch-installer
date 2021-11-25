@@ -14,23 +14,13 @@ bootloader_module() {
 
 out '[.] Setting up bootloader.'
 
-set +u
-if ! [ -v encryption_kernel_param ]; then
-    local encryption_kernel_param=""
-fi
-set -u
-
-set +u
-if ! [ -v ucode_kernel_param ]; then
-    local ucode_kernel_param=""
-fi
-set -u
-
-set +u
-if ! [ -v resume_kernel_params ]; then
-    local resume_kernel_params=""
-fi
-set -u
+for var in encryption_kernel_param  ucode_kernel_param  resume_kernel_params; do
+    set +u
+    if ! [[ -v $var ]]; then
+        declare local $var=""
+    fi
+    set -u
+done
 
 # Save bootloader configuration so the installation can be recovered if the firmware deletes the entry
 

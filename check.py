@@ -1,3 +1,4 @@
+import platform
 from os.path import join
 from sys import argv
 
@@ -51,7 +52,7 @@ def analyze(module, variables):
         for no, line in enumerate(f, start=1):
             line = line.strip()
 
-            if mode in {'imports', 'imports.either', 'import.optionals', 'exports'}:
+            if mode in {'imports', 'imports.either', 'exports'}:
                 blockline = line.lstrip('#')
 
 
@@ -144,12 +145,15 @@ def main():
     with open(argv[1]) as f:
         for line in f:
             if line.startswith('source'):
-                module = join(wd, line[len('source '):].replace('/', '\\').strip())
+                module = join(wd, line[len('source '):].strip())
+
+                if platform.system() == "Windows":
+                	module = module.replace('/', '\\')
 
                 analyze(module, variables)
 
             elif line.startswith('cd'):
-                wd = join(wd, line[len('cd '):].strip().replace('/', '\\'))
+                wd = join(wd, line[len('cd '):].strip())
 
 
 if __name__ == '__main__':

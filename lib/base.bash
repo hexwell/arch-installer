@@ -20,4 +20,4 @@ out() {
     echo $1 >&$user_stdout
 }
 
-trap "if [ \$? -ne 0 ]; then out '[!] An error occurred.'; fi" EXIT
+trap "[[ \$? -eq 0 ]] || out '[!] An error occurred.'" EXIT

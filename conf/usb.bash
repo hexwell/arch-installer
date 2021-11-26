@@ -6,8 +6,8 @@ source lib/conf.bash
 #   LOGFILE  : Log file
 #   MIRROR: Arch ISO mirror url
 
-#   VERSION
 #   DEVICE
+#   VERSION
 
 
 # Module: Base

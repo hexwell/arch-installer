@@ -13,28 +13,21 @@ pacstrap_module() {
 
 out '[.] Installing OS...'
 
+set +e
+
 local ucode=""
 
-if grep -m 1 GenuineIntel /proc/cpuinfo; then
-	local ucode=intel-ucode
-fi
+grep -m 1 GenuineIntel /proc/cpuinfo && local ucode=intel-ucode
+grep -m 1 AuthenticAMD /proc/cpuinfo && local ucode=amd-ucode
 
-if grep -m 1 AuthenticAMD /proc/cpuinfo; then
-	local ucode=amd-ucode
-fi
-
-if ! [[ -z "$ucode" ]]; then
-	ucode_kernel_param="initrd=\\""$ucode"".img "
-fi
+[[ -z "$ucode" ]] || ucode_kernel_param="initrd=\\""$ucode"".img "
 
 
 local network=""
 
-set +u
-if [[ -v enable_wifi ]]; then
-	local network="iwd"
-fi
-set -u
+[[ -v enable_wifi ]] && local network="$network"" iwd"
+
+set -e
 
 
 pacstrap $INSTALLATION_MOUNTPOINT base linux linux-firmware $ucode $network networkmanager

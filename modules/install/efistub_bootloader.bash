@@ -3,6 +3,7 @@
 bootloader_module() {
 
 # IMPORTS:
+#   INSTALLATION_MOUNTPOINT
 #   boot_partition_disk_device
 #   boot_partition_number
 #   root_partition_device
@@ -15,11 +16,7 @@ bootloader_module() {
 out '[.] Setting up bootloader.'
 
 for var in encryption_kernel_param  ucode_kernel_param  resume_kernel_params; do
-    set +u
-    if ! [[ -v $var ]]; then
-        declare local $var=""
-    fi
-    set -u
+    [[ -v $var ]] || declare local $var=""
 done
 
 # Save bootloader configuration so the installation can be recovered if the firmware deletes the entry

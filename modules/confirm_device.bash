@@ -11,11 +11,9 @@
 # EXPORTS:
 #   override device : Installation target device
 
-set +u
 if [[ -v DEVICE ]]; then
     device="$DEVICE"
 fi
-set -u
 
 out "[+] Selected '$device'."
 read -p "Press enter to continue..." 2>&$user_stdout

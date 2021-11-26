@@ -10,13 +10,9 @@ out '[.] Running mkinitcpio.'
 hooks=$(grep '^HOOKS' $INSTALLATION_MOUNTPOINT/etc/mkinitcpio.conf)
 
 add() {
-    set +e
-
     if ! echo $hooks | grep $1; then
         hooks=$(echo $hooks | sed "s/)/ ""$1"")/")
     fi
-
-    set -e
 }
 
 add keyboard

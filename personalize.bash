@@ -6,6 +6,11 @@ source lib/base.bash
 cd modules/personalize
 
 
+# Prepare
+
+source ../check_root.bash
+
+
 # Network
 
 source ../ethernet.bash

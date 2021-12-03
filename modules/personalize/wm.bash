@@ -15,11 +15,7 @@ sudo make install
 
 cd $current_dir
 
-sed -i '/# start some nice programs/,$s/^/# /'
-
-sed -i "/twm/s/^/# /g" /etc/X11/xinit/xinitrc
-sed -i "/xclock/s/^/# /g" /etc/X11/xinit/xinitrc
-sed -i "/xterm/s/^/# /g" /etc/X11/xinit/xinitrc
+sed -i '/# start some nice programs/,$s/^/# /' /etc/X11/xinit/xinitrc
 
 echo exec i3 > ~/.xinitrc
 echo >> ~/.xinitrc

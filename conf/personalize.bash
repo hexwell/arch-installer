@@ -3,6 +3,7 @@
 source lib/conf.bash
 
 # EXPORTS:
+#   LOGFILE  : Log file
 #   EADDR    : Ethernet IP address
 #   EGW      : Ethernet default gateway
 #   WSSID    : WiFi SSID

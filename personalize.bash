@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source conf/root.bash
+source conf/personalize.bash
 source lib/base.bash
 
 cd modules/personalize

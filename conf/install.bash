@@ -8,17 +8,19 @@ source lib/conf.bash
 #   DEVICE   : Installation device
 #   EADDR    : Ethernet IP address
 #   EGW      : Ethernet default gateway
-#   DNS_A    : Ethernet DNS
-#   DNS_B    : Ethernet fallback DNS
 #   WSSID    : WiFi SSID
 #   WPASS    : WiFi passphrase
+#   DNS_A    : DNS
+#   DNS_B    : Fallback DNS
 #   LUKSPASS : LUKS disk encryption passphrase
 #   DMNAME   : LUKS disk encryption device mapper name
 #   INSTALLATION_MOUNTPOINT : Mountpoint of the new installation
 #   TZ       : Timezone
 #   LANG     : Language locale
 #   HOST     : New OS hostname
-#   PASS     : New OS root user passphrase
+#   ROOTPASS : New OS root user passphrase
+#   USERNAME : New OS user name
+#   USERPASS : New OS user passphrase
 
 
 # Module: Base
@@ -43,8 +45,6 @@ DEVICE=/dev/sdX
 
 EADDR=x.x.x.x/x
 EGW=x.x.x.x
-DNS_A=1.1.1.1
-DNS_B=8.8.4.4
 
 
 # Module: WiFi
@@ -52,6 +52,13 @@ DNS_B=8.8.4.4
 
 WSSID=x
 WPASS=x
+
+
+# Module: Resolv
+# --- MANDATORY ---
+
+DNS_A=1.1.1.1
+DNS_B=8.8.4.4
 
 
 # Module: Disk encryption
@@ -73,4 +80,11 @@ INSTALLATION_MOUNTPOINT=/mnt
 TZ=Europe/Rome
 LANG=en_US.UTF-8
 HOST=x
-PASS=x
+ROOTPASS=x
+
+
+# Module: Users
+# --- MANDATORY ---
+
+USERNAME=x
+USERPASS=x

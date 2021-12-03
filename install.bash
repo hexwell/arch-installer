@@ -20,8 +20,9 @@ source ../confirm_device.bash
 
 # Network
 
-# source ethernet.bash
-source wifi.bash
+# source ../ethernet.bash
+source ../wifi.bash
+# source ../resolv.bash
 source check_connection.bash
 source ntp.bash
 
@@ -37,6 +38,7 @@ source format_and_mount.bash
 source pacstrap.bash
 source fstab.bash
 source personalization.bash
+source users.bash
 source swap.bash
 source mkinitcpio.bash
 source efistub_bootloader.bash

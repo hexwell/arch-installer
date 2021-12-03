@@ -8,7 +8,7 @@ personalization_module() {
 #   LANG
 #   KEYBOARD
 #   HOST
-#   PASS
+#   ROOTPASS
 #
 # Optionals:
 #   enable_wifi
@@ -33,7 +33,7 @@ echo >> $INSTALLATION_MOUNTPOINT/etc/vconsole.conf
 echo "$HOST" > $INSTALLATION_MOUNTPOINT/etc/hostname
 echo >> $INSTALLATION_MOUNTPOINT/etc/hostname
 
-echo root:$PASS | arch-chroot $INSTALLATION_MOUNTPOINT chpasswd
+echo "root:""$ROOTPASS" | arch-chroot $INSTALLATION_MOUNTPOINT chpasswd
 
 arch-chroot $INSTALLATION_MOUNTPOINT systemctl enable NetworkManager
 

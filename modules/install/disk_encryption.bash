@@ -9,6 +9,7 @@ disk_encryption_module() {
 #   root_partition_device
 #
 # EXPORTS:
+#   enable_encryption : Set if encryption is required
 #   encryption_kernel_param : LUKS disk encryption kernel parameter
 #   override root_partition_device : Device of the root partition
 
@@ -20,6 +21,8 @@ disk_encryption_module() {
 out '[.] Setting up disk encryption.'
 echo -n "$LUKSPASS" | cryptsetup -v -d - luksFormat "$root_partition_device"
 echo -n "$LUKSPASS" | cryptsetup -d - open "$root_partition_device" $DMNAME
+
+enable_encryption=true
 
 local DEV_UUID=$(blkid -s UUID -o value "$root_partition_device")
 encryption_kernel_param="cryptdevice=UUID=""$DEV_UUID"":""$DMNAME"" "

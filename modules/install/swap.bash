@@ -7,6 +7,7 @@ swap_module() {
 #   root_partition_device
 #
 # EXPORTS:
+#   enable_resume: Set if hibernation is required
 #   resume_kernel_params : Resume kernel parameter to enable hibernation
 
 out '[.] Setting up swap...'
@@ -24,6 +25,7 @@ echo >> $INSTALLATION_MOUNTPOINT/etc/fstab
 local filefrag=$(arch-chroot $INSTALLATION_MOUNTPOINT filefrag -v /swapfile)
 local offset=$(echo "$filefrag" | awk '$1=="0:" {print substr($4, 1, length($4)-2)}')
 
+enable_resume=true
 resume_kernel_params=" resume=""$root_partition_device"" resume_offset=""$offset"
 
 out '[+] Swap set up.'

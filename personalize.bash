@@ -16,6 +16,7 @@ source ../check_root.bash
 source ../ethernet.bash
 # source ../wifi.bash
 source ../resolv.bash
+source ../check_connection.bash
 
 
 # AUR Helper

@@ -10,7 +10,7 @@ source lib/conf.bash
 #   WPASS    : WiFi passphrase
 #   DNS_A    : Ethernet DNS
 #   DNS_B    : Ethernet fallback DNS
-#   USERNAME : Username
+#   USER     : Username
 
 
 # Module: Base
@@ -38,3 +38,9 @@ WPASS=x
 
 DNS_A=1.1.1.1
 DNS_B=8.8.4.4
+
+
+# Modules: Yay, WM
+# --- MANDATORY ---
+
+USER=x

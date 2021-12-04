@@ -13,7 +13,7 @@ source lib/conf.bash
 # Module: Base
 # --- MANDATORY ---
 
-LOGFILE=log
+LOGFILE=usb.log
 
 
 # Modules: Select device, confirm device

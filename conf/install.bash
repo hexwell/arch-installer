@@ -26,7 +26,7 @@ source lib/conf.bash
 # Module: Base
 # --- MANDATORY ---
 
-LOGFILE=log
+LOGFILE=install.log
 
 
 # Module: Set KB layout, personalization

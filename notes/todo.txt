@@ -1,3 +1,8 @@
+- USB script:
+  Copy repository inside ISO (which will then be flashed on the USB drive), so that no internet connection is needed to download it
+  For this it is probably needed to create a custom ISO, as the official one is read-only.
+  https://wiki.archlinux.org/title/archiso#Adding_files_to_image
+
 - chocolatey windows auto installer
 - windows version of arch installer usb creator, made with dd from the git chocolatey package
   - There is dd in git for windows (cygwin)

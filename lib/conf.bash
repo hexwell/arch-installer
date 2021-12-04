@@ -1,2 +1,2 @@
-# u - fail on undeclared variables
-set -u
+# fail on undeclared variables
+set -o nounset

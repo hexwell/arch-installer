@@ -10,11 +10,17 @@
 # Logging
 exec {user_stdout}>&1 &>"$LOGFILE"
 
-# e - fail on non-zero exit codes
-# u - fail on undeclared variables
-# x - echo commands (for logging)
-# o pipefail - fail early in pipelines
-set -euxo pipefail
+# fail on non-zero exit codes
+set -o errexit
+
+# fail on undeclared variables
+set -o nounset
+
+# fail early in pipelines
+set -o pipefail
+
+# echo commands (for logging)
+set -xtrace
 
 out() {
     echo $1 >&$user_stdout

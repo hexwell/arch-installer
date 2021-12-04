@@ -1,0 +1,8 @@
+- chocolatey windows auto installer
+- windows version of arch installer usb creator, made with dd from the git chocolatey package
+  - There is dd in git for windows (cygwin)
+  - How to have wget in git for Windows:
+      Download: https://eternallybored.org/misc/wget/
+      Into: C:\Program Files\Git\mingw64\bin\
+
+- symlink the dotfiles in various places to dotfiles repo directory

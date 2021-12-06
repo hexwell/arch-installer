@@ -20,7 +20,7 @@ set -o nounset
 set -o pipefail
 
 # echo commands (for logging)
-set -xtrace
+set -o xtrace
 
 out() {
     echo $1 >&$user_stdout

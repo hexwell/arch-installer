@@ -11,7 +11,7 @@ out "[.] Installing WM."
 pacman -S --noconfirm base-devel openssh git xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libxinerama i3-wm i3status noto-fonts
 
 git clone https://git.suckless.org/st /home/$USER/.config/st
-git clone https://git.suckless.org/dmenu /home/$USER/.confgi/dmenu
+git clone https://git.suckless.org/dmenu /home/$USER/.config/dmenu
 
 current_dir=$(pwd)
 

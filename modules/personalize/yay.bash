@@ -2,7 +2,6 @@
 
 # IMPORTS:
 #   out
-#   USER
 
 out "[.] Installing yay."
 

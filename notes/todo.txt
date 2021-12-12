@@ -3,7 +3,7 @@
   For this it is probably needed to create a custom ISO, as the official one is read-only.
   https://wiki.archlinux.org/title/archiso#Adding_files_to_image
 
-- chocolatey windows auto installer
+- chocolatey windows auto installer (now windows has it's own package manager, maybe look into that)
 - windows version of arch installer usb creator, made with dd from the git chocolatey package
   - There is dd in git for windows (cygwin)
   - How to have wget in git for Windows:
@@ -11,3 +11,5 @@
       Into: C:\Program Files\Git\mingw64\bin\
 
 - symlink the dotfiles in various places to dotfiles repo directory
+
+- Make a script to install Arch in dual boot w/ Windows, with disk ecnrytpion. Bootloader TBD

@@ -4,7 +4,7 @@ source lib/conf.bash
 
 # EXPORTS:
 #   LOGFILE  : Log file
-#   MIRROR: Arch ISO mirror url
+#   MIRROR : Arch ISO mirror url
 
 #   DEVICE
 #   VERSION

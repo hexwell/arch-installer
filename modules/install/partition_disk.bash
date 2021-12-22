@@ -3,7 +3,7 @@
 # IMPORTS:
 #   out
 #   device
-#
+
 # EXPORTS:
 #   boot_partition_disk_device : Device of the boot partition disk
 #   boot_partition_number : Boot partition number

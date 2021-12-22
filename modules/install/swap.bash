@@ -5,7 +5,7 @@ swap_module() {
 # IMPORTS:
 #   INSTALLATION_MOUNTPOINT
 #   root_partition_device
-#
+
 # EXPORTS:
 #   enable_resume : Set if hibernation is required
 #   resume_kernel_params : Resume kernel parameter to enable hibernation

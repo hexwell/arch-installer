@@ -7,7 +7,7 @@ disk_encryption_module() {
 #   LUKSPASS
 #   DMNAME
 #   root_partition_device
-#
+
 # EXPORTS:
 #   enable_encryption : Set if encryption is required
 #   encryption_kernel_param : LUKS disk encryption kernel parameter

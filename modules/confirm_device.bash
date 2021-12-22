@@ -7,7 +7,7 @@
 #   Either:
 #     DEVICE
 #     device
-#
+
 # EXPORTS:
 #   override device : Installation target device
 

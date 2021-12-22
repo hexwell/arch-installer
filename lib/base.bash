@@ -2,7 +2,7 @@
 
 # IMPORTS:
 #   LOGFILE
-#
+
 # EXPORTS:
 #   out : Log function
 #   user_stdout : User stdout file descriptor

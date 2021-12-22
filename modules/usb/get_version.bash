@@ -10,7 +10,7 @@
 #
 # Optionals:
 #   VERSION
-#
+
 # EXPORTS:
 #   version : Arch ISO version
 

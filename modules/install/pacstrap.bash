@@ -7,7 +7,7 @@ pacstrap_module() {
 #
 # Optionals:
 #   enable_wifi
-#
+
 # EXPORTS:
 #   ucode_kernel_param : Microcode kernel parameter
 

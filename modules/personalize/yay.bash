@@ -2,6 +2,7 @@
 
 # IMPORTS:
 #   out
+#   USER
 
 out "[.] Installing yay."
 
@@ -11,7 +12,8 @@ git clone https://aur.archlinux.org/yay-bin.git
 
 cd yay-bin
 
-makepkg -si --asroot
+chown -R $USER .
+sudo -u $USER makepkg -si
 
 cd ..
 rm -r yay-bin

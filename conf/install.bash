@@ -37,6 +37,7 @@ KEYBOARD=it
 
 # Module: Confirm device
 # --- MANDATORY ---
+
 DEVICE=/dev/sdX
 
 

@@ -8,17 +8,13 @@ wm_module() {
 
 out "[.] Installing WM."
 
-pacman -S --noconfirm base-devel openssh git xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libxinerama i3-wm i3status noto-fonts
+pacman -S --noconfirm base-devel openssh git xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libxinerama i3-wm i3status noto-fonts dmenu
 
 git clone https://git.suckless.org/st /home/$USER/.config/st
-git clone https://git.suckless.org/dmenu /home/$USER/.config/dmenu
 
 current_dir=$(pwd)
 
 cd /home/$USER/.config/st
-make install
-
-cd /home/$USER/.config/dmenu
 make install
 
 cd $current_dir

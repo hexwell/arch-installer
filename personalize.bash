@@ -28,5 +28,8 @@ source yay.bash
 
 source wm.bash
 
+# DM
+
+source dm.bash
 
 out '[+] Done.'

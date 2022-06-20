@@ -2,10 +2,11 @@
 
 # IMPORTS:
 #   out
+#   USER
 
 out '[.] Installing display manager.'
 
-yay -S ly
+sudo -u $USER yay -S ly
 
 systemctl enable ly
 

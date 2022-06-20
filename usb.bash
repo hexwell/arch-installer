@@ -42,7 +42,7 @@ fi
 source add_partition.bash
 source format_and_mount.bash
 
-cp -r . /mnt
+cp -r ../.. /mnt
 umount /mnt
 
 out '[+] USB ready.'

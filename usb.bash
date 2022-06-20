@@ -32,9 +32,6 @@ source download.bash
 source verify.bash
 source flash.bash
 
-# TODO
-exit 0
-
 out '[.] Copying installer...'
 
 if ls /mnt; then
@@ -42,9 +39,9 @@ if ls /mnt; then
     exit 1
 fi
 
-# todo check partition number
-mount $device"1" /mnt
-cp install.sh /mnt
-umount /mnt
+source add_partition.bash
+source format_and_mount.bash
+source copy.bash
+source unmount.bash
 
 out '[+] USB ready.'

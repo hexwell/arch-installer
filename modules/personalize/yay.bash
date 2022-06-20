@@ -6,7 +6,7 @@
 
 out "[.] Installing yay."
 
-pacman -Sy --needed --noconfirm base-devel openssh git
+pacman -Sy --needed --noconfirm base-devel git
 
 git clone https://aur.archlinux.org/yay-bin.git
 

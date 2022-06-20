@@ -5,6 +5,6 @@
 
 out '[.] Installing utils.'
 
-pacman -S --noconfirm dmenu alacritty mate-polkit
+pacman -S --noconfirm pulseaudio alsa-utils dmenu alacritty mate-polkit
 
 out '[+] Utils installed.'

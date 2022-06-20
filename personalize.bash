@@ -24,12 +24,16 @@ source ../check_connection.bash
 source yay.bash
 
 
-# WM
-
-source wm.bash
-
 # DM
 
 source dm.bash
+
+# Utils
+
+source utils.bash
+
+# WM
+
+source wm.bash
 
 out '[+] Done.'

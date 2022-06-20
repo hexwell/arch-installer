@@ -7,7 +7,6 @@ personalization_module() {
 #   TZ
 #   LANG
 #   KEYBOARD
-#   USERNAME
 #   HOST
 #   ROOTPASS
 #
@@ -30,10 +29,6 @@ echo >> $INSTALLATION_MOUNTPOINT/etc/locale.conf
 
 echo "KEYMAP=""$KEYBOARD" > $INSTALLATION_MOUNTPOINT/etc/vconsole.conf
 echo >> $INSTALLATION_MOUNTPOINT/etc/vconsole.conf
-
-echo \# fix for DEL key not working in terminals > /home/$USERNAME/.inputrc
-echo >> /home/$USERNAME/.inputrc
-echo set enable-keypad on >> /home/$USERNAME/.inputrc
 
 echo "$HOST" > $INSTALLATION_MOUNTPOINT/etc/hostname
 echo >> $INSTALLATION_MOUNTPOINT/etc/hostname

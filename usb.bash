@@ -34,14 +34,15 @@ source flash.bash
 
 out '[.] Copying installer...'
 
-if ls /mnt; then
+if lsblk | grep /mnt; then
     out '[!] /mnt not available.'
     exit 1
 fi
 
 source add_partition.bash
 source format_and_mount.bash
-source copy.bash
-source unmount.bash
+
+cp -r . /mnt
+umount /mnt
 
 out '[+] USB ready.'

@@ -7,7 +7,7 @@ out '[.] Installing display manager.'
 
 yay -S ly
 
-sudo systemctl enable ly
+systemctl enable ly
 
 # TODO modify systemd ly.service & ly's config.ini
 

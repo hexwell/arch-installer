@@ -36,4 +36,6 @@ source utils.bash
 
 source wm.bash
 
+source dotfiles.bash
+
 out '[+] Done.'

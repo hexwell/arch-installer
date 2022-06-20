@@ -28,13 +28,15 @@ source yay.bash
 
 source dm.bash
 
-# Utils
-
-source utils.bash
+source xorg.bash
 
 # WM
 
 source wm.bash
+
+# Utils
+
+source utils.bash
 
 source dotfiles.bash
 

@@ -6,16 +6,16 @@
 
 out "[.] Installing yay."
 
-pacman -Sy --needed --noconfirm base-devel git
+pacman --refresh --sync --needed --noconfirm base-devel git
 
 git clone https://aur.archlinux.org/yay-bin.git
 
 cd yay-bin
 
-chown -R $USER .
-sudo -u $USER makepkg -si --noconfirm
+chown --recursive $USER .
+sudo -u $USER makepkg --noconfirm --syncdeps --install
 
 cd ..
-rm -r yay-bin
+rm --recursive yay-bin
 
 out "[+] yay installed."

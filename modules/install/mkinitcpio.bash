@@ -29,9 +29,9 @@ set +e
 [[ -v enable_resume ]] && add resume
 set -e
 
-sed -i "/^HOOKS/c""$hooks" $INSTALLATION_MOUNTPOINT/etc/mkinitcpio.conf
+sed --in-place "/^HOOKS/c""$hooks" $INSTALLATION_MOUNTPOINT/etc/mkinitcpio.conf
 
-arch-chroot $INSTALLATION_MOUNTPOINT mkinitcpio -P
+arch-chroot $INSTALLATION_MOUNTPOINT mkinitcpio --allpresets
 
 }
 

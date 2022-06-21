@@ -18,7 +18,7 @@ if [[ -v VERSION ]]; then
     version="$VERSION"
 else
     out '[.] Getting version...'
-    version=$(curl "$MIRROR""/""$isodir""/latest/" | grep -Po "$fileprefix([0-9 | \.]+)$filepostfix" | head -1 | awk -F "$versiondelimiter" '{print $2}')
+    version=$(curl "$MIRROR""/""$isodir""/latest/" | grep --perl-regexp --only-matching "$fileprefix([0-9 | \.]+)$filepostfix" | head -1 | awk --field-separator "$versiondelimiter" '{print $2}')
 fi
 
 out "[+] Using version $version."

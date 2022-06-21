@@ -6,7 +6,7 @@
 
 out '[.] Installing display manager.'
 
-sudo -u $USER yay -S ly
+sudo -u $USER yay -S --noconfirm ly
 
 systemctl enable ly
 

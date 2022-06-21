@@ -15,12 +15,12 @@ personalization_module() {
 
 out '[.] Applying personalizations.'
 
-arch-chroot $INSTALLATION_MOUNTPOINT ln -sf /usr/share/zoneinfo/""$TZ"" /etc/localtime
+arch-chroot $INSTALLATION_MOUNTPOINT ln --symbolic --force /usr/share/zoneinfo/""$TZ"" /etc/localtime
 arch-chroot $INSTALLATION_MOUNTPOINT hwclock --systohc
 
 local LOCALE="$LANG"" UTF-8"
 
-sed -i "/#""$LOCALE""/s/^#//" $INSTALLATION_MOUNTPOINT/etc/locale.gen
+sed --in-place "/#""$LOCALE""/s/^#//" $INSTALLATION_MOUNTPOINT/etc/locale.gen
 
 arch-chroot $INSTALLATION_MOUNTPOINT locale-gen
 

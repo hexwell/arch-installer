@@ -19,8 +19,8 @@ disk_encryption_module() {
 # TODO Mind that in the log there's also the wifi pass, so either that has to change or the log has to be deleted anyways.
 
 out '[.] Setting up disk encryption.'
-echo -n "$LUKSPASS" | cryptsetup -v -d - luksFormat "$root_partition_device"
-echo -n "$LUKSPASS" | cryptsetup -d - open "$root_partition_device" $DMNAME
+echo -n "$LUKSPASS" | cryptsetup --verbose --key-file - luksFormat "$root_partition_device"
+echo -n "$LUKSPASS" | cryptsetup --key-file - open "$root_partition_device" $DMNAME
 
 enable_encryption=true
 

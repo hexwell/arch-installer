@@ -17,8 +17,8 @@ set +e
 
 local ucode=""
 
-grep -m 1 GenuineIntel /proc/cpuinfo && local ucode=intel-ucode
-grep -m 1 AuthenticAMD /proc/cpuinfo && local ucode=amd-ucode
+grep --max-count 1 GenuineIntel /proc/cpuinfo && local ucode=intel-ucode
+grep --max-count 1 AuthenticAMD /proc/cpuinfo && local ucode=amd-ucode
 
 [[ -z "$ucode" ]] || ucode_kernel_param="initrd=\\""$ucode"".img "
 

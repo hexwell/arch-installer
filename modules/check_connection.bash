@@ -3,6 +3,6 @@
 # IMPORTS:
 #   out
 
-ping -c 3 1.1.1.1
+ping -c 3 one.one.one.one
 
 out '[+] Connected to the Internet.'

@@ -5,6 +5,6 @@
 
 out "[.] Installing WM."
 
-pacman -S --noconfirm i3-wm i3status noto-fonts
+pacman --sync --noconfirm i3-wm i3status noto-fonts
 
 out "[+] WM installed."

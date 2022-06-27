@@ -26,13 +26,13 @@ source yay.bash
 
 # DM
 
-source dm.bash
+source ly_dm.bash
 
 source xorg.bash
 
 # WM
 
-source wm.bash
+source i3_wm.bash
 
 # Utils
 

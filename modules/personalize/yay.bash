@@ -6,7 +6,7 @@
 
 out '[.] Installing yay...'
 
-pacman --refresh --sync --needed --noconfirm base-devel git
+pacman --refresh --sync --needed --noconfirm git base-devel
 
 git clone https://aur.archlinux.org/yay-bin.git
 

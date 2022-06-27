@@ -5,7 +5,7 @@ utils_module() {
 # IMPORTS:
 #   out
 
-out '[.] Installing utils.'
+out '[.] Installing utils...'
 
 pacman --sync --needed --noconfirm pulseaudio alsa-utils dmenu alacritty mate-polkit brightnessctl slock wget
 

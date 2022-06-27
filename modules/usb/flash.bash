@@ -20,4 +20,4 @@ dd if="$isofile" of="$device" bs=4M oflag=sync status=progress 2>&$user_stdout
 
 cd modules/usb
 
-out '[+] Done'
+out '[+] Written.'

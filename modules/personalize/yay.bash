@@ -4,7 +4,7 @@
 #   out
 #   USER
 
-out "[.] Installing yay..."
+out '[.] Installing yay...'
 
 pacman --refresh --sync --needed --noconfirm base-devel git
 
@@ -18,4 +18,4 @@ sudo -u $USER makepkg --noconfirm --syncdeps --install
 cd ..
 rm --recursive yay-bin
 
-out "[+] yay installed."
+out '[+] yay installed.'

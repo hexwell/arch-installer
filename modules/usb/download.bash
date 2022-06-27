@@ -23,3 +23,5 @@ cd $current_dir
 out '[+] Downloaded.'
 
 }
+
+download_module

@@ -12,13 +12,13 @@ download_module() {
 
 out '[.] Downloading...'
 
-local current_dir=$(pwd)
+local previous_dir=$(pwd)
 
 cd ../..
 
 wget "$MIRROR""/""$path""/""$isofile" "https://archlinux.org/""$path""/""$sigfile" --show-progress 2>&$user_stdout
 
-cd $current_dir
+cd $previous_dir
 
 out '[+] Downloaded.'
 

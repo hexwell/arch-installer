@@ -3,7 +3,7 @@
 # IMPORTS:
 #   out
 
-out "[.] Installing WM."
+out "[.] Installing WM..."
 
 pacman --sync --needed --noconfirm i3-wm i3status noto-fonts
 

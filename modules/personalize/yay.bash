@@ -4,7 +4,7 @@
 #   out
 #   USER
 
-out "[.] Installing yay."
+out "[.] Installing yay..."
 
 pacman --refresh --sync --needed --noconfirm base-devel git
 

@@ -4,7 +4,7 @@
 #   out
 #   USER
 
-out "[+] Copying dotfiles."
+out '[+] Copying dotfiles.'
 
 mkdir /home/$USER/.config/i3
 mkdir /home/$USER/.config/alacritty

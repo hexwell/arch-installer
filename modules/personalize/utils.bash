@@ -5,7 +5,7 @@ utils_module() {
 # IMPORTS:
 #   out
 
-out '[.] Installing utils...'
+out "[.] Installing utils..."
 
 pacman --sync --needed --noconfirm pulseaudio alsa-utils dmenu alacritty mate-polkit brightnessctl slock wget
 
@@ -21,7 +21,7 @@ chmod +x $install_dir/dmenuumount
 
 pacman --remove --recursive --noconfirm wget
 
-out '[+] Utils installed.'
+out "[+] Utils installed."
 
 }
 

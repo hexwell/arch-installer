@@ -6,7 +6,7 @@
 
 out "[.] Installing Xorg."
 
-pacman --sync --needed --noconfirm xorg-server
+pacman --sync --needed --noconfirm xorg-server xorg-setxkbmap xorg-xrandr
 
 echo setxkbmap -layout it > /home/$USER/.xprofile
 echo >> /home/$USER/.xprofile

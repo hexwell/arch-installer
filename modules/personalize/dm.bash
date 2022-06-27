@@ -4,7 +4,7 @@
 #   out
 #   USER
 
-out '[.] Installing display manager.'
+out '[.] Installing display manager...'
 
 sudo -u $USER yay -S --noconfirm ly
 

@@ -1,10 +1,14 @@
 #!/bin/bash
 
+verify_module() {
+
 # IMPORTS:
 #   out
 #   sigfile
 
 out '[.] Verifing signature...'
+
+local previous_dir=$(pwd)
 
 cd ../..
 
@@ -20,4 +24,8 @@ fi
 
 set -e
 
-cd modules/usb
+cd $previous_dir
+
+}
+
+verify_module

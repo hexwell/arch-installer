@@ -32,7 +32,7 @@ source download.bash
 source verify.bash
 source flash.bash
 
-rm $isofile $sigfile
+rm ../../$isofile ../../$sigfile
 
 out '[.] Copying installer...'
 

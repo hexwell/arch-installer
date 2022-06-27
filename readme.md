@@ -29,7 +29,6 @@ sudo ./usb.bash
 
 - Edit `conf/install.bash` on the created USB appropriately.
 - Edit `install.bash` on the created USB to enable/disable modules to your liking. 
- - Edit `modules/install/pacstrap.bash` on the created USB to add/remove installation of packages to your taste.
 - Boot the USB using UEFI.
 
 ```bash

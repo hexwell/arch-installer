@@ -6,7 +6,7 @@
 #   isofile
 #   user_stdout
 
-out "[.] Using device $device"
+out "[.] Using device $device."
 
 set +e
 umount "$device"?*

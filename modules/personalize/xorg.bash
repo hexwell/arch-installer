@@ -8,7 +8,7 @@ xorg_module() {
 
 out '[.] Installing Xorg...'
 
-pacman --sync --needed --noconfirm xorg-server xorg-setxkbmap xautolock xss-lock xclipboard xorg-xrandr
+pacman --sync --needed --noconfirm xorg-server xorg-setxkbmap xautolock xss-lock xorg-xclipboard xorg-xrandr
 
 local xprofile=/home/$USER/.xprofile
 local locker=slock

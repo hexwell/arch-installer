@@ -7,7 +7,7 @@
 # EXPORTS:
 #   partition_device : Device of the new partition
 
-out "[.] Adding partition"
+out "[.] Adding partition."
 
 (
 echo n  # Create a new partition

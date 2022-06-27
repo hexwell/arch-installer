@@ -32,6 +32,8 @@ source download.bash
 source verify.bash
 source flash.bash
 
+rm $isofile $sigfile
+
 out '[.] Copying installer...'
 
 if lsblk | grep /mnt; then

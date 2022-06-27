@@ -44,7 +44,7 @@ fi
 source add_partition.bash
 source format_and_mount.bash
 
-cp --recursive ../.. /mnt
+cp --recursive ../../../arch-installer /mnt
 umount /mnt
 
 out '[+] USB ready.'

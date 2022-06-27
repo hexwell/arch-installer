@@ -15,9 +15,7 @@ wget https://tools.suckless.org/dmenu/scripts/dmenu_run_with_command_history/dme
 wget https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.local/bin/dmenumount --directory-prefix $install_dir
 wget https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.local/bin/dmenuumount --directory-prefix $install_dir
 
-chmod +x $install_dir/dmenu_run_history
-chmod +x $install_dir/dmenumount
-chmod +x $install_dir/dmenuumount
+chmod +x $install_dir/dmenu_run_history $install_dir/dmenumount $install_dir/dmenuumount
 
 pacman --remove --recursive --noconfirm wget
 

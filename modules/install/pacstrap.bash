@@ -30,7 +30,7 @@ local network=""
 set -e
 
 
-pacstrap $INSTALLATION_MOUNTPOINT base linux linux-firmware $ucode $network networkmanager sudo
+pacstrap $INSTALLATION_MOUNTPOINT base linux linux-firmware $ucode $network sudo
 
 out '[+] OS installed.'
 

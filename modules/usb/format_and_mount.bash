@@ -9,5 +9,5 @@ out '[.] Formatting.'
 mkfs.ext4 "$partition_device"
 mount "$partition_device" /mnt
 
-out '[+] Done.'
+out '[+] Done formatting.'
 

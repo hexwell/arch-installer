@@ -6,7 +6,7 @@ xorg_module() {
 #   out
 #   USER
 
-out "[.] Installing Xorg."
+out "[.] Installing Xorg..."
 
 pacman --sync --needed --noconfirm xorg-server xorg-setxkbmap xautolock xss-lock xclipboard xorg-xrandr
 

@@ -4,13 +4,12 @@ xorg_module() {
 
 # IMPORTS:
 #   out
-#   USERNAME
 
 out '[.] Installing Xorg...'
 
 pacman --sync --needed --noconfirm xorg-server xorg-setxkbmap xautolock xss-lock xorg-xclipboard xorg-xrandr
 
-local xprofile=/home/$USERNAME/.xprofile
+local xprofile=/etc/xprofile
 local locker=slock
 
 echo setxkbmap -layout it > $xprofile
@@ -21,8 +20,6 @@ echo xautolock -time 10 -locker $locker \& >> $xprofile
 echo xss-lock $locker \& >> $xprofile
 echo >> $xprofile
 echo xclipboard \& >> $xprofile
-
-chown $USERNAME /home/$USERNAME/.xprofile
 
 out '[+] Xorg installed.'
 

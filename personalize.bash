@@ -13,9 +13,9 @@ source ../check_root.bash
 
 # Network
 
-source ../ethernet.bash
-# source ../wifi.bash
-source ../resolv.bash
+# source ../ethernet.bash
+source ../wifi.bash
+# source ../resolv.bash
 source ../check_connection.bash
 
 

@@ -7,7 +7,7 @@
 # EXPORTS:
 #   enable_wifi : Set if WiFi is required
 
-enable_wifi=true
+enable_wifi=yes
 
 out '[.] Connecting to WiFi.'
 iwctl --passphrase $WPASS station wlan0 connect $WSSID

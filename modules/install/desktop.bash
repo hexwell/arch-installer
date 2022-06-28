@@ -15,7 +15,7 @@ local homedir=/home/$USERNAME/
 
 cp --recursive $REPOSITORY_LOCATION$REPOSITORY_NAME $INSTALLATION_MOUNTPOINT$homedir
 
-arch-chroot $INSTALLATION_MOUNTPOINT $homedir$REPOSITORY_NAME/personalize.bash
+arch-chroot $INSTALLATION_MOUNTPOINT cd $homedir$REPOSITORY_NAME\; ./personalize.bash
 
 }
 

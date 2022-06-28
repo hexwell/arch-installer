@@ -97,7 +97,7 @@ USERPASS=x
 
 # TODO Maybe this should be calculated?
 # TODO Maybe this should be in GB?
-SWAP_SIZE_MB=8192
+SWAP_SIZE_MiB=8192
 
 
 # Module: Desktop

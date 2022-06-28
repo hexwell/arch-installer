@@ -16,6 +16,8 @@ local previous_dir=$(pwd)
 
 cd ../..
 
+# Changing directory instead of using the --directory-prefix option so the output to the user doesn't have ../../
+
 wget $MIRROR/$path/$isofile https://archlinux.org/$path/$sigfile --show-progress 2>&$user_stdout
 
 cd $previous_dir

@@ -8,7 +8,7 @@ verify_module() {
 
 out '[.] Verifing signature...'
 
-local previous_dir=$(pwd)
+local previous_dir=$PWD
 
 cd ../..
 

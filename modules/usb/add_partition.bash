@@ -19,3 +19,6 @@ echo w
 ) | fdisk $device
 
 partition_device=$device'3'
+
+# Allow kernel to re-sync disks
+sleep 1

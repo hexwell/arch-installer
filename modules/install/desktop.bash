@@ -7,7 +7,7 @@ desktop_module() {
 #   USERNAME
 #   REPOSITORY_LOCATION
 #   REPOSITORY_NAME
-#   INSTALLATION_MOUNTPOINT
+#   chroot
 
 out '[+] Installing desktop.'
 
@@ -15,7 +15,7 @@ local homedir=/home/$USERNAME/
 
 cp --recursive $REPOSITORY_LOCATION$REPOSITORY_NAME $INSTALLATION_MOUNTPOINT$homedir
 
-arch-chroot $INSTALLATION_MOUNTPOINT cd $homedir$REPOSITORY_NAME\; ./personalize.bash
+$chroot bash -c "cd $homedir$REPOSITORY_NAME; ./personalize.bash"
 
 }
 

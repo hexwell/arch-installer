@@ -29,7 +29,7 @@ echo >> $fstab
 local filefrag=$($chroot filefrag -v $swapfile)
 local offset=$(echo $filefrag | awk '$1=="0:" {print substr($4, 1, length($4)-2)}')
 
-enable_resume=true
+enable_resume=yes
 resume_kernel_params=" resume=$root_partition_device resume_offset=$offset"
 
 out '[+] Swap set up.'

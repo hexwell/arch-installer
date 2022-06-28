@@ -29,4 +29,4 @@ out() {
 
 trap "[[ \$? -eq 0 ]] || out '[!] An error occurred.'" EXIT
 
-REPOSITORY_NAME = 'arch-installer'
+REPOSITORY_NAME='arch-installer'

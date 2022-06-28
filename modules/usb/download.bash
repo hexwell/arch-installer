@@ -12,7 +12,7 @@ download_module() {
 
 out '[.] Downloading...'
 
-local previous_dir=$(pwd)
+local previous_dir=$PWD
 
 cd ../..
 

@@ -12,7 +12,7 @@
 #   override device : Installation target device
 
 if [[ -v DEVICE ]]; then
-    device="$DEVICE"
+    device=$DEVICE
 fi
 
 out "[+] Selected '$device'."

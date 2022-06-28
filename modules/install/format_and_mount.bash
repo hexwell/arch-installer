@@ -9,22 +9,27 @@ format_and_mount_module() {
 #   boot_partition_disk_device
 #   boot_partition_number
 
+# EXPORTS:
+#   boot_partition_mountpoint : mount point of the boot partition
+
 out '[.] Formatting.'
 
-mkfs.ext4 "$root_partition_device"
-mount "$root_partition_device" $INSTALLATION_MOUNTPOINT
+mkfs.ext4 $root_partition_device
+mount $root_partition_device $INSTALLATION_MOUNTPOINT
 
 # Initially I wanted to mount the ESP to /efi, but then I decided to mount it to /boot for the following reasons:
 # - It's where kernel packages place the kernel files (and [consequently] where all other programs (e.g. mkinitcpio) expect it to be mounted)
 # - It's the officially recomended way when using EFISTUB (https://wiki.archlinux.org/title/EFI_system_partition#Typical_mount_points)
 # - It's where one would expect it to be mounted in this type of installation
 
-mkdir $INSTALLATION_MOUNTPOINT/boot
+boot_partition_mountpoint=$INSTALLATION_MOUNTPOINT/boot
+
+mkdir $boot_partition_mountpoint
 
 local boot_partition_device=$boot_partition_disk_device$boot_partition_number
 
-mkfs.fat -F32 "$boot_partition_device"
-mount "$boot_partition_device" $INSTALLATION_MOUNTPOINT/boot
+mkfs.fat -F32 $boot_partition_device
+mount $boot_partition_device $boot_partition_mountpoint
 
 out '[+] Disk ready.'
 

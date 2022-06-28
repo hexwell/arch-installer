@@ -4,5 +4,5 @@
 #   KEYBOARD
 #   out
 
-loadkeys "$KEYBOARD"
-out "[+] Keyboard set to $KEYBOARD."
+loadkeys $KEYBOARD
+out '[+] Keyboard set to $KEYBOARD.'

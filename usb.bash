@@ -14,8 +14,8 @@ source lib/base.bash
 
 isodir=iso
 versiondelimiter='-'
-fileprefix="archlinux""$versiondelimiter"
-filepostfix="$versiondelimiter""x86_64.iso"
+fileprefix=archlinux$versiondelimiter
+filepostfix="$versiondelimiter"x86_64.iso
 
 cd modules/usb
 
@@ -24,9 +24,9 @@ source select_device.bash
 source ../confirm_device.bash
 source get_version.bash
 
-path="$isodir""/""$version"
-isofile="$fileprefix""$version""$filepostfix"
-sigfile="$isofile.sig"
+path=$isodir/$version
+isofile=$fileprefix$version$filepostfix
+sigfile=$isofile.sig
 
 source download.bash
 source verify.bash
@@ -44,7 +44,7 @@ fi
 source add_partition.bash
 source format_and_mount.bash
 
-cp --recursive ../../../arch-installer /mnt
+cp --recursive ../../../$REPOSITORY_NAME /mnt
 umount /mnt
 
 out '[+] USB ready.'

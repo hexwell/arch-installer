@@ -2,7 +2,7 @@
 
 # IMPORTS:
 #   out
-#   USER
+#   USERNAME
 
 out '[.] Installing yay...'
 
@@ -12,8 +12,8 @@ git clone https://aur.archlinux.org/yay-bin.git
 
 cd yay-bin
 
-chown --recursive $USER .
-sudo -u $USER makepkg --noconfirm --syncdeps --install
+chown --recursive $USERNAME .
+sudo -u $USERNAME makepkg --noconfirm --syncdeps --install
 
 cd ..
 rm --recursive yay-bin

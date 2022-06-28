@@ -3,6 +3,7 @@
 personalization_module() {
 
 # IMPORTS:
+#   chroot
 #   INSTALLATION_MOUNTPOINT
 #   TZ
 #   LANG
@@ -15,30 +16,36 @@ personalization_module() {
 
 out '[.] Applying personalizations.'
 
-arch-chroot $INSTALLATION_MOUNTPOINT ln --symbolic --force /usr/share/zoneinfo/""$TZ"" /etc/localtime
-arch-chroot $INSTALLATION_MOUNTPOINT hwclock --systohc
+$chroot ln --symbolic --force /usr/share/zoneinfo/$TZ /etc/localtime
+$chroot hwclock --systohc
 
-local LOCALE="$LANG"" UTF-8"
+local LOCALE="$LANG UTF-8"
 
-sed --in-place "/#""$LOCALE""/s/^#//" $INSTALLATION_MOUNTPOINT/etc/locale.gen
+sed --in-place "/#$LOCALE/s/^#//" $INSTALLATION_MOUNTPOINT/etc/locale.gen
 
-arch-chroot $INSTALLATION_MOUNTPOINT locale-gen
+$chroot locale-gen
 
-echo "LANG=""$LANG" > $INSTALLATION_MOUNTPOINT/etc/locale.conf
-echo >> $INSTALLATION_MOUNTPOINT/etc/locale.conf
+local locale_conf=$INSTALLATION_MOUNTPOINT/etc/locale.conf
 
-echo "KEYMAP=""$KEYBOARD" > $INSTALLATION_MOUNTPOINT/etc/vconsole.conf
-echo >> $INSTALLATION_MOUNTPOINT/etc/vconsole.conf
+echo "LANG=$LANG" > $locale_conf
+echo >> $locale_conf
 
-echo "$HOST" > $INSTALLATION_MOUNTPOINT/etc/hostname
-echo >> $INSTALLATION_MOUNTPOINT/etc/hostname
+local vconsole_conf=$INSTALLATION_MOUNTPOINT/etc/vconsole.conf
 
-echo "root:""$ROOTPASS" | arch-chroot $INSTALLATION_MOUNTPOINT chpasswd
+echo "KEYMAP=$KEYBOARD" > $vconsole_conf
+echo >> $vconsole_conf
 
-arch-chroot $INSTALLATION_MOUNTPOINT systemctl enable NetworkManager
+local hostname=$INSTALLATION_MOUNTPOINT/etc/hostname
+
+echo $HOST > $hostname
+echo >> $hostname
+
+echo root:$ROOTPASS | $chroot chpasswd
+
+$chroot systemctl enable NetworkManager
 
 if [[ -v enable_wifi ]]; then
-	arch-chroot $INSTALLATION_MOUNTPOINT systemctl enable iwd
+	$chroot systemctl enable iwd
 fi
 
 }

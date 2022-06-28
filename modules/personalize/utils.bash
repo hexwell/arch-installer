@@ -11,11 +11,15 @@ pacman --sync --needed --noconfirm pulseaudio alsa-utils dmenu alacritty mate-po
 
 local install_dir=/usr/local/bin/
 
-wget https://tools.suckless.org/dmenu/scripts/dmenu_run_with_command_history/dmenu_run_history --directory-prefix $install_dir
-wget https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.local/bin/dmenumount --directory-prefix $install_dir
-wget https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.local/bin/dmenuumount --directory-prefix $install_dir
+download() {
+	wget $1 --directory-prefix $install_dir
+}
 
-chmod +x $install_dir/dmenu_run_history $install_dir/dmenumount $install_dir/dmenuumount
+download https://tools.suckless.org/dmenu/scripts/dmenu_run_with_command_history/dmenu_run_history
+download https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.local/bin/dmenumount
+download https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.local/bin/dmenuumount
+
+chmod +x $install_dir/*
 
 pacman --remove --recursive --noconfirm wget
 

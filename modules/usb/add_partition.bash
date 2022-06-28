@@ -16,6 +16,6 @@ echo    # Default number
 echo    # Default first sector
 echo    # Default last sector
 echo w
-) | fdisk "$device"
+) | fdisk $device
 
-partition_device="$device""3"
+partition_device=$device'3'

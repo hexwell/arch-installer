@@ -1,12 +1,20 @@
 #!/bin/bash
 
+dotfiles_module() {
+
 # IMPORTS:
 #   out
-#   USER
+#   USERNAME
 
 out '[+] Copying dotfiles.'
 
-mkdir /home/$USER/.config/i3
-mkdir /home/$USER/.config/alacritty
+local config_dir=/home/$USERNAME/.config
+
+mkdir $config_dir/i3
+mkdir $config_dir/alacritty
 
 # TODO symlink the dotfiles from the repo
+
+}
+
+dotfiles_module

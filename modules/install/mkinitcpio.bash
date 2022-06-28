@@ -4,6 +4,7 @@ mkinitcpio_module() {
 
 # IMPORTS:
 #   INSTALLATION_MOUNTPOINT
+#   chroot
 #
 # Optionals:
 #   enable_encryption
@@ -11,11 +12,13 @@ mkinitcpio_module() {
 
 out '[.] Running mkinitcpio.'
 
-hooks=$(grep '^HOOKS' $INSTALLATION_MOUNTPOINT/etc/mkinitcpio.conf)
+local mkinitcpio_conf=$INSTALLATION_MOUNTPOINT/etc/mkinitcpio.conf
+
+local hooks=$(grep '^HOOKS' $mkinitcpio_conf)
 
 add() {
     if ! echo $hooks | grep $1; then
-        hooks=$(echo $hooks | sed "s/)/ ""$1"")/")
+        hooks=$(echo $hooks | sed "s/)/ $1)/")
     fi
 }
 
@@ -29,9 +32,9 @@ set +e
 [[ -v enable_resume ]] && add resume
 set -e
 
-sed --in-place "/^HOOKS/c""$hooks" $INSTALLATION_MOUNTPOINT/etc/mkinitcpio.conf
+sed --in-place "/^HOOKS/c$hooks" $mkinitcpio_conf
 
-arch-chroot $INSTALLATION_MOUNTPOINT mkinitcpio --allpresets
+$chroot mkinitcpio --allpresets
 
 }
 

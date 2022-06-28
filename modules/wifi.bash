@@ -10,5 +10,5 @@
 enable_wifi=true
 
 out '[.] Connecting to WiFi.'
-iwctl --passphrase "$WPASS" station wlan0 connect "$WSSID"
+iwctl --passphrase $WPASS station wlan0 connect $WSSID
 sleep 5

@@ -13,7 +13,7 @@ local previous_dir=$(pwd)
 cd ../..
 
 set +e
-gpg --keyserver hkp://pool.sks-keyservers.net --keyserver-options auto-key-retrieve --verify "$sigfile"
+gpg --keyserver hkp://pool.sks-keyservers.net --keyserver-options auto-key-retrieve --verify $sigfile
 
 if [[ $? -eq 0 ]]; then
     out '[+] Valid signature.'

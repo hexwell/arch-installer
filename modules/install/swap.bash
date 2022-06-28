@@ -4,6 +4,9 @@ swap_module() {
 
 # IMPORTS:
 #   INSTALLATION_MOUNTPOINT
+#   SWAP_SIZE_MiB
+#   chroot
+#   fstab
 #   root_partition_device
 
 # EXPORTS:
@@ -12,21 +15,22 @@ swap_module() {
 
 out '[.] Setting up swap...'
 
-# 8192
-dd if=/dev/zero of=$INSTALLATION_MOUNTPOINT/swapfile bs=1M count=512
-arch-chroot $INSTALLATION_MOUNTPOINT chmod 600 /swapfile
-arch-chroot $INSTALLATION_MOUNTPOINT mkswap /swapfile
+local swapfile=/swapfile
 
-echo >> $INSTALLATION_MOUNTPOINT/etc/fstab
-echo "# swap" >> $INSTALLATION_MOUNTPOINT/etc/fstab
-echo "/swapfile none swap defaults 0 0" >> $INSTALLATION_MOUNTPOINT/etc/fstab
-echo >> $INSTALLATION_MOUNTPOINT/etc/fstab
+dd if=/dev/zero of=$INSTALLATION_MOUNTPOINT$swapfile bs=1M count=$SWAP_SIZE_MiB
+$chroot chmod 600 $swapfile
+$chroot mkswap $swapfile
 
-local filefrag=$(arch-chroot $INSTALLATION_MOUNTPOINT filefrag -v /swapfile)
-local offset=$(echo "$filefrag" | awk '$1=="0:" {print substr($4, 1, length($4)-2)}')
+echo >> $fstab
+echo '# swap' >> $fstab
+echo "$swapfile none swap defaults 0 0" >> $fstab
+echo >> $fstab
+
+local filefrag=$($chroot filefrag -v $swapfile)
+local offset=$(echo $filefrag | awk '$1=="0:" {print substr($4, 1, length($4)-2)}')
 
 enable_resume=true
-resume_kernel_params=" resume=""$root_partition_device"" resume_offset=""$offset"
+resume_kernel_params=" resume=$root_partition_device resume_offset=$offset"
 
 out '[+] Swap set up.'
 

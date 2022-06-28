@@ -2,11 +2,11 @@
 
 # IMPORTS:
 #   out
-#   USER
+#   USERNAME
 
 out '[.] Installing display manager...'
 
-sudo -u $USER yay -S --noconfirm ly
+sudo -u $USERNAME yay -S --noconfirm ly
 
 systemctl enable ly
 

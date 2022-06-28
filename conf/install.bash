@@ -21,7 +21,8 @@ source lib/conf.bash
 #   ROOTPASS : New OS root user passphrase
 #   USERNAME : New OS user name
 #   USERPASS : New OS user passphrase
-
+#   SWAP_SIZE_MiB           : Size of the swapfile in MiB
+#   REPOSITORY_LOCATION     : Location of the git repository folder
 
 # Module: Base
 # --- MANDATORY ---
@@ -69,7 +70,7 @@ LUKSPASS=x
 DMNAME=cryptroot
 
 
-# Modules: Format and mount, pacstrap, fstab, personalization, mkinitcpio, swap
+# Modules: Format and mount, pacstrap, fstab, personalization, users, swap, mkinitcpio
 # --- MANDATORY ---
 
 INSTALLATION_MOUNTPOINT=/mnt
@@ -84,8 +85,22 @@ HOST=x
 ROOTPASS=x
 
 
-# Module: Users
+# Module: Users, Desktop
 # --- MANDATORY ---
 
 USERNAME=x
 USERPASS=x
+
+
+# Module: Swap
+# --- MANDATORY ---
+
+# TODO Maybe this should be calculated?
+# TODO Maybe this should be in GB?
+SWAP_SIZE_MB=8192
+
+
+# Module: Desktop
+# --- MANDATORY ---
+
+REPOSITORY_LOCATION=/mn/

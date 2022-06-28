@@ -5,8 +5,8 @@ disk_encryption_module() {
 # IMPORTS:
 #   out
 #   LUKSPASS
-#   DMNAME
 #   root_partition_device
+#   DMNAME
 
 # EXPORTS:
 #   enable_encryption : Set if encryption is required
@@ -19,13 +19,14 @@ disk_encryption_module() {
 # TODO Mind that in the log there's also the wifi pass, so either that has to change or the log has to be deleted anyways.
 
 out '[.] Setting up disk encryption.'
-echo -n "$LUKSPASS" | cryptsetup --verbose --key-file - luksFormat "$root_partition_device"
-echo -n "$LUKSPASS" | cryptsetup --key-file - open "$root_partition_device" $DMNAME
 
-enable_encryption=true
+echo -n $LUKSPASS | cryptsetup --verbose --key-file - luksFormat $root_partition_device
+echo -n $LUKSPASS | cryptsetup --key-file - open $root_partition_device $DMNAME
 
-local DEV_UUID=$(blkid -s UUID -o value "$root_partition_device")
-encryption_kernel_param="cryptdevice=UUID=""$DEV_UUID"":""$DMNAME"" "
+enable_encryption=yes
+
+local DEV_UUID=$(blkid -s UUID -o value $root_partition_device)
+encryption_kernel_param="cryptdevice=UUID=$DEV_UUID:$DMNAME "
 root_partition_device=/dev/mapper/$DMNAME
 
 }

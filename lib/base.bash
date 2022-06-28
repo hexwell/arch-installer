@@ -4,8 +4,9 @@
 #   LOGFILE
 
 # EXPORTS:
-#   out : Log function
 #   user_stdout : User stdout file descriptor
+#   out : Log function
+#   REPOSITORY_NAME : name of the git repository folder
 
 # Logging
 exec {user_stdout}>&1 &>"$LOGFILE"
@@ -27,3 +28,5 @@ out() {
 }
 
 trap "[[ \$? -eq 0 ]] || out '[!] An error occurred.'" EXIT
+
+REPOSITORY_NAME = 'arch-installer'

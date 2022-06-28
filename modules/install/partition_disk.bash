@@ -28,11 +28,11 @@ echo       # Default number
 echo       # Default first sector
 echo       # Default last sector
 echo w     # Write
-) | fdisk "$device"
+) | fdisk $device
 
 boot_partition_disk_device=$device
 boot_partition_number=1
-root_partition_device="$device""2"
+root_partition_device=$device'2'
 
 # Allow kernel to re-sync disks
 sleep 1

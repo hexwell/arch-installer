@@ -40,7 +40,7 @@ DNS_A=1.1.1.1
 DNS_B=8.8.4.4
 
 
-# Modules: Yay, ly DM, xorg, dotfiles
+# Modules: Yay, ly DM, dotfiles
 # --- MANDATORY ---
 
 # TODO Make this automatic

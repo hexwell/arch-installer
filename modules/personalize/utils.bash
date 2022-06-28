@@ -7,7 +7,7 @@ utils_module() {
 
 out '[.] Installing utils...'
 
-pacman --sync --needed --noconfirm pulseaudio alsa-utils dmenu alacritty mate-polkit brightnessctl slock wget
+pacman --sync --needed --noconfirm pulseaudio alsa-utils dmenu alacritty brightnessctl slock mate-polkit wget
 
 local install_dir=/usr/local/bin/
 

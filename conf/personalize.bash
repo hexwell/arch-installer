@@ -43,4 +43,5 @@ DNS_B=8.8.4.4
 # Modules: Yay, ly DM, XOrg, dotfiles
 # --- MANDATORY ---
 
+# TODO Make this automatic
 USERNAME=x

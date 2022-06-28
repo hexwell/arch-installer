@@ -6,7 +6,7 @@
 # EXPORTS:
 #   user_stdout : User stdout file descriptor
 #   out : Log function
-#   REPOSITORY_NAME : name of the git repository folder
+#   REPOSITORY_NAME : Name of the git repository folder
 
 # Logging
 exec {user_stdout}>&1 &>$LOGFILE

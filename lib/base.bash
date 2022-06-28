@@ -9,7 +9,7 @@
 #   REPOSITORY_NAME : name of the git repository folder
 
 # Logging
-exec {user_stdout}>&1 &>"$LOGFILE"
+exec {user_stdout}>&1 &>$LOGFILE
 
 # fail on non-zero exit codes
 set -o errexit

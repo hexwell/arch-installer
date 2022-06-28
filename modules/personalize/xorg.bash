@@ -22,7 +22,7 @@ echo xss-lock $locker \& >> $xprofile
 echo >> $xprofile
 echo xclipboard \& >> $xprofile
 
-chown $USER /home/$USER/.xprofile
+chown $USER /home/$USERNAME/.xprofile
 
 out '[+] Xorg installed.'
 

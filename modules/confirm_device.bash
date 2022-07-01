@@ -16,7 +16,7 @@ if [[ -v DEVICE ]]; then
 fi
 
 out "[+] Selected '$device'."
-read -p "Press enter to continue..." 2>&$user_stdout
+read -p 'Press enter to continue...' 2>&$user_stdout
 
 # Clear previous line and leave caret there
 echo -en "\e[1A\e[K" >&$user_stdout

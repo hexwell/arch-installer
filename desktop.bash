@@ -31,9 +31,9 @@ source ../check_connection.bash
 source yay.bash
 
 
-# DM
+# LM
 
-source ly_dm.bash
+source ly_lm.bash
 
 source xorg.bash
 

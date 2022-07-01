@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# IMPORSTS:
+# IMPORTS:
 # Optionals:
 #   USERNAME
 

@@ -10,7 +10,7 @@ out '[+] Copying dotfiles.'
 
 local config_dir=/home/$username/.config
 
-mkdir $config_dir/i3
+mkdir -p $config_dir/i3
 mkdir $config_dir/alacritty
 
 # TODO symlink the dotfiles from the repo

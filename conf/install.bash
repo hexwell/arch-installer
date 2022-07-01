@@ -6,12 +6,8 @@ source lib/conf.bash
 #   LOGFILE  : Log file
 #   KEYBOARD : Keyboard layout
 #   DEVICE   : Installation device
-#   EADDR    : Ethernet IP address
-#   EGW      : Ethernet default gateway
 #   WSSID    : WiFi SSID
 #   WPASS    : WiFi passphrase
-#   DNS_A    : DNS
-#   DNS_B    : Fallback DNS
 #   LUKSPASS : LUKS disk encryption passphrase
 #   DMNAME   : LUKS disk encryption device mapper name
 #   INSTALLATION_MOUNTPOINT : Mountpoint of the new installation
@@ -23,6 +19,11 @@ source lib/conf.bash
 #   USERPASS : New OS user passphrase
 #   SWAP_SIZE_MiB           : Size of the swapfile in MiB
 #   REPOSITORY_LOCATION     : Location of the git repository folder
+
+#   EADDR    : Ethernet IP address
+#   EGW      : Ethernet default gateway
+#   DNS_A    : DNS
+#   DNS_B    : Fallback DNS
 
 # Module: Base
 # --- MANDATORY ---
@@ -45,8 +46,8 @@ DEVICE=/dev/sdX
 # Module: Ethernet
 # --- MANDATORY ---
 
-EADDR=x.x.x.x/x
-EGW=x.x.x.x
+# EADDR=x.x.x.x/x
+# EGW=x.x.x.x
 
 
 # Module: WiFi
@@ -59,8 +60,8 @@ WPASS=x
 # Module: Resolv
 # --- MANDATORY ---
 
-DNS_A=1.1.1.1
-DNS_B=8.8.4.4
+# DNS_A=1.1.1.1
+# DNS_B=8.8.4.4
 
 
 # Module: Disk encryption
@@ -85,7 +86,7 @@ HOST=x
 ROOTPASS=x
 
 
-# Module: Users, Desktop
+# Module: Users, desktop
 # --- MANDATORY ---
 
 USERNAME=x
@@ -95,7 +96,7 @@ USERPASS=x
 # Module: Swap
 # --- MANDATORY ---
 
-# TODO Maybe this should be calculated?
+# TODO Maybe this should be calculated automatically?
 # TODO Maybe this should be in GB?
 SWAP_SIZE_MiB=8192
 

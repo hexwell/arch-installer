@@ -5,8 +5,10 @@ source lib/base.bash
 
 # EXPORTS:
 #   install : Command to install packages silently
+#   username : Username
 
 install='pacman --sync --needed --noconfirm'
+username=${1:-$USERNAME}
 
 cd modules/desktop
 
@@ -14,6 +16,7 @@ cd modules/desktop
 # Prepare
 
 source ../check_root.bash
+source check_username.bash
 
 
 # Network

@@ -10,9 +10,10 @@ source lib/conf.bash
 #   WPASS    : WiFi passphrase
 #   DNS_A    : Ethernet DNS
 #   DNS_B    : Ethernet fallback DNS
-#   USERNAME : Username
 #   LOCKER_PKG : Pacman package of locker
 #   LOCKER_CMD : Command of locker
+
+#   USERNAME : Username
 
 
 # Module: Base
@@ -42,14 +43,14 @@ DNS_A=1.1.1.1
 DNS_B=8.8.4.4
 
 
-# Modules: Dotfiles
-# --- MANDATORY ---
+# Module: Dotfiles
+# --- OPTIONALS ---
 
-# TODO Make this automatic
-USERNAME=x
+# Mandatory only when installing desktop standalone, without install.bash
+# USERNAME=x
 
 
-# Modules: Xorg, Utils
+# Module: Xorg, utils
 
 LOCKER_PKG=slock
 LOCKER_CMD=$LOCKER_PKG

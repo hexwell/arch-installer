@@ -4,11 +4,9 @@ source conf/desktop.bash
 source lib/base.bash
 
 # EXPORTS:
-#   silent_pacman : Command for non-interactive pacman
 #   install : Command to install packages silently
 
-silent_pacman='pacman --noconfirm'
-install="$silent_pacman --sync --needed"
+install='pacman --sync --needed --noconfirm'
 
 cd modules/desktop
 

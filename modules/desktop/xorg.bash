@@ -4,10 +4,11 @@ xorg_module() {
 
 # IMPORTS:
 #   out
+#   install
 
 out '[.] Installing Xorg...'
 
-pacman --sync --needed --noconfirm xorg-server xorg-setxkbmap xautolock xss-lock xorg-xclipboard xorg-xrandr
+$install xorg-server xorg-setxkbmap xautolock xss-lock xorg-xclipboard xorg-xrandr
 
 local xprofile=/etc/xprofile
 local locker=slock

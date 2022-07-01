@@ -2,11 +2,12 @@
 
 # IMPORTS:
 #   out
+#   install
 #   USERNAME
 
 out '[.] Installing yay...'
 
-pacman --refresh --sync --needed --noconfirm git base-devel
+$install --refresh git base-devel
 
 git clone https://aur.archlinux.org/yay-bin.git
 

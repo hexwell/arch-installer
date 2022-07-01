@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source conf/personalize.bash
+source conf/desktop.bash
 source lib/base.bash
 
-cd modules/personalize
+cd modules/desktop
 
 
 # Prepare

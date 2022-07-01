@@ -16,7 +16,7 @@ source lib/conf.bash
 # Module: Base
 # --- MANDATORY ---
 
-LOGFILE=personalize.log
+LOGFILE=desktop.log
 
 
 # Module: Ethernet

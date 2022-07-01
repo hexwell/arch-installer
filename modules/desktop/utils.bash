@@ -20,6 +20,8 @@ curl --output-dir $install_dir --remote-name-all https://tools.suckless.org/dmen
 
 chmod +x $install_dir/*
 
+sed --in-place '/#HandlePowerKey/s/^#//;s/HandlePowerKey=poweroff/HandlePowerKey=ignore/;/#HandleLidSwitch/s/^#//;s/HandleLidSwitch=suspend/HandleLidSwitch=ignore/' /etc/systemd/logind.conf
+
 out '[+] Utils installed.'
 
 }

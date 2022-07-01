@@ -5,11 +5,12 @@ utils_module() {
 # IMPORTS:
 #   out
 #   install
+#   LOCKER_PKG
 #   silent_pacman
 
 out '[.] Installing utils...'
 
-$install pulseaudio alsa-utils dmenu alacritty brightnessctl slock mate-polkit wget
+$install pulseaudio alsa-utils dmenu alacritty brightnessctl $LOCKER_PKG mate-polkit wget
 
 local install_dir=/usr/local/bin/
 

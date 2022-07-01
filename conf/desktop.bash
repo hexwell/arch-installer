@@ -11,6 +11,8 @@ source lib/conf.bash
 #   DNS_A    : Ethernet DNS
 #   DNS_B    : Ethernet fallback DNS
 #   USERNAME : Username
+#   LOCKER_PKG : Pacman package of locker
+#   LOCKER_CMD : Command of locker
 
 
 # Module: Base
@@ -40,8 +42,14 @@ DNS_A=1.1.1.1
 DNS_B=8.8.4.4
 
 
-# Modules: Yay, ly DM, dotfiles
+# Modules: Yay, ly LM, Dotfiles
 # --- MANDATORY ---
 
 # TODO Make this automatic
 USERNAME=x
+
+
+# Modules: Xorg, Utils
+
+LOCKER_PKG=slock
+LOCKER_CMD=$LOCKER_PKG

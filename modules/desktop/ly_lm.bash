@@ -2,11 +2,10 @@
 
 # IMPORTS:
 #   out
-#   USERNAME
 
 out '[.] Installing login manager...'
 
-sudo -u $USERNAME yay -S --noconfirm ly
+aur-install ly
 
 systemctl enable ly
 

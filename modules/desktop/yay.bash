@@ -3,20 +3,11 @@
 # IMPORTS:
 #   out
 #   install
-#   USERNAME
 
 out '[.] Installing yay...'
 
-$install --refresh git base-devel
+# $install --refresh base-devel
 
-git clone https://aur.archlinux.org/yay-bin.git
-
-cd yay-bin
-
-chown --recursive $USERNAME .
-sudo -u $USERNAME makepkg --noconfirm --syncdeps --install
-
-cd ..
-rm --recursive yay-bin
+curl https://raw.githubusercontent.com/greyltc-org/docker-archlinux-aur/master/add-aur.sh | bash
 
 out '[+] yay installed.'

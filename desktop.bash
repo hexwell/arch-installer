@@ -14,7 +14,6 @@ cd modules/desktop
 # Prepare
 
 source ../check_root.bash
-source check_username.bash
 
 
 # Network

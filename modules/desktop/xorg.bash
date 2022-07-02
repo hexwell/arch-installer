@@ -9,11 +9,13 @@ xorg_module() {
 
 out '[.] Installing Xorg...'
 
-$install xorg-server xorg-setxkbmap xautolock xss-lock xorg-xclipboard xorg-xrandr
+$install xorg-server xorg-setxkbmap xorg-xinput xautolock xss-lock xorg-xclipboard xorg-xrandr
 
 local xprofile=/etc/xprofile
 
 echo setxkbmap -layout it > $xprofile
+echo xinput --set-prop 13 \"libinput Accel Speed\" .3  # Thinkpad Trackpad
+echo xinput --set-prop 14 \"libinput Accel Speed\" 1   # Thinkpad Trackpoint
 echo >> $xprofile
 echo /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 \& >> $xprofile
 echo >> $xprofile

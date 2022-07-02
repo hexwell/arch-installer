@@ -22,6 +22,7 @@ cd modules/usb
 source ../check_root.bash
 source select_device.bash
 source ../confirm_device.bash
+source ../check_connection.bash
 source get_version.bash
 
 path=$iso_dir/$version

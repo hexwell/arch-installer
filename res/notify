@@ -1,0 +1,30 @@
+#!/bin/bash
+
+notify_cmd='notify-send --replace-id 1 --expire-time 1000'
+
+case $1 in
+	volume)
+		if [[ -v 2 ]] && [ $2 == mic ]; then
+			notify_mic="$notify_cmd Mic"
+
+			if amixer get Mic | grep off; then
+				$notify_mic off
+			else
+				$notify_mic on
+			fi
+
+		else
+			notify_volume="$notify_cmd Volume:"
+
+			if amixer get Master | grep off; then
+				$notify_volume mute
+			else
+				$notify_volume $(amixer get Master | awk --field-separator [][] '{ print $2 }' | awk NF)
+			fi
+		fi
+	;;
+
+	brightness)
+		$notify_cmd Brightness: $(brightnessctl --machine-readable | awk --field-separator , '{print $4}')
+	;;
+esac

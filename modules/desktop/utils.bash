@@ -9,7 +9,7 @@ utils_module() {
 
 out '[.] Installing utils...'
 
-$install pulseaudio alsa-utils dmenu alacritty brightnessctl $LOCKER_PKG udisks2 mate-polkit
+$install pulseaudio alsa-utils dunst libnotify dmenu alacritty brightnessctl $LOCKER_PKG udisks2 mate-polkit
 
 local install_dir=/usr/local/bin/
 
@@ -17,6 +17,8 @@ local install_dir=/usr/local/bin/
 # and because udiskie only auto mounts disks, so unmount must be done manually and a helper would have been necessary anyways.
 
 curl --output-dir $install_dir --remote-name-all https://tools.suckless.org/dmenu/scripts/dmenu_run_with_command_history/dmenu_run_history https://raw.githubusercontent.com/hexwell/voidrice/master/.local/bin/dmenumount https://raw.githubusercontent.com/hexwell/voidrice/master/.local/bin/dmenuumount
+
+cp ../../res/notify $install_dir
 
 chmod +x $install_dir/*
 

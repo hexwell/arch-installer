@@ -3,7 +3,7 @@
 # IMPORTS:
 #   out
 #   device
-#   isofile
+#   iso_file
 #   user_stdout
 
 out "[.] Using device $device."
@@ -16,7 +16,7 @@ out '[.] Writing to disk...'
 
 cd ../..
 
-dd if=$isofile of=$device bs=4M oflag=sync status=progress 2>&$user_stdout
+dd if=$iso_file of=$device bs=4M oflag=sync status=progress 2>&$user_stdout
 
 cd modules/usb
 

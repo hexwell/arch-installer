@@ -48,4 +48,4 @@ source utils.bash
 
 source dotfiles.bash
 
-out '[+] Done.'
+out '[+] Done installing desktop.'

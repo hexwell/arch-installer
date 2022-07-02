@@ -45,4 +45,4 @@ source mkinitcpio.bash
 source efistub_bootloader.bash
 source desktop.bash
 
-out '[+] Done.'
+out '[+] Done installing.'

@@ -5,9 +5,9 @@ download_module() {
 # IMPORTS:
 #   out
 #   MIRROR
-#   isofile
+#   iso_file
 #   path
-#   sigfile
+#   sig_file
 #   user_stdout
 
 out '[.] Downloading...'
@@ -18,7 +18,7 @@ cd ../..
 
 # Changing directory instead of using the --directory-prefix option so the output to the user doesn't have ../../
 
-wget $MIRROR/$path/$isofile https://archlinux.org/$path/$sigfile --show-progress 2>&$user_stdout
+wget $MIRROR/$path/$iso_file https://archlinux.org/$path/$sig_file --show-progress 2>&$user_stdout
 
 cd $previous_dir
 

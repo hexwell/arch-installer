@@ -4,11 +4,11 @@ dotfiles_module() {
 
 # IMPORTS:
 #   out
-#   username
+#   USERNAME
 
 out '[+] Copying dotfiles.'
 
-local config_dir=/home/$username/.config
+local config_dir=/home/$USERNAME/.config
 
 mkdir -p $config_dir/i3
 mkdir $config_dir/alacritty

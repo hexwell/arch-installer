@@ -11,11 +11,11 @@ desktop_module() {
 
 out '[+] Installing desktop.'
 
-local homedir=/home/$USERNAME/
+local dropdir=/root/
 
-cp --recursive $REPOSITORY_LOCATION$REPOSITORY_NAME $INSTALLATION_MOUNTPOINT$homedir
+cp --recursive $REPOSITORY_LOCATION$REPOSITORY_NAME $INSTALLATION_MOUNTPOINT$dropdir
 
-$chroot bash -c "cd $homedir$REPOSITORY_NAME; ./desktop.bash" >&$user_stdout
+$chroot bash -c "cd $dropdir$REPOSITORY_NAME; ./desktop.bash" >&$user_stdout
 
 }
 

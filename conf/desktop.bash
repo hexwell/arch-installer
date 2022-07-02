@@ -13,7 +13,8 @@ source lib/conf.bash
 #   EGW      : Ethernet default gateway
 #   DNS_A    : Ethernet DNS
 #   DNS_B    : Ethernet fallback DNS
-#   USERNAME : Username
+#   USERNAME : User name
+#   USERPASS : User passphrase
 
 
 # Module: Base
@@ -43,14 +44,14 @@ WPASS=x
 # DNS_B=8.8.4.4
 
 
-# Module: Dotfiles
-# --- OPTIONALS ---
-
-# Mandatory only when installing desktop standalone, without install.bash
-# USERNAME=x
-
-
 # Module: Xorg, utils
 
 LOCKER_PKG=slock
 LOCKER_CMD=$LOCKER_PKG
+
+
+# Module: User, dotfiles
+# --- MANDATORY ---
+
+USERNAME=x
+USERPASS=x

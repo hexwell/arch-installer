@@ -39,7 +39,6 @@ source format_and_mount.bash
 source pacstrap.bash
 source fstab.bash
 source personalization.bash
-source users.bash
 source swap.bash
 source mkinitcpio.bash
 source efistub_bootloader.bash

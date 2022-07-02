@@ -46,6 +46,8 @@ source i3_wm.bash
 
 source utils.bash
 
+source user.bash
+
 source dotfiles.bash
 
 out '[+] Done installing desktop.'

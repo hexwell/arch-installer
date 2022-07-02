@@ -15,8 +15,6 @@ source lib/conf.bash
 #   LANG     : Language locale
 #   HOST     : New OS hostname
 #   ROOTPASS : New OS root user passphrase
-#   USERNAME : New OS user name
-#   USERPASS : New OS user passphrase
 #   SWAP_SIZE_MiB           : Size of the swapfile in MiB
 #   REPOSITORY_LOCATION     : Location of the git repository folder
 
@@ -84,13 +82,6 @@ TZ=Europe/Rome
 LANG=en_US.UTF-8
 HOST=x
 ROOTPASS=x
-
-
-# Module: Users, desktop
-# --- MANDATORY ---
-
-USERNAME=x
-USERPASS=x
 
 
 # Module: Swap

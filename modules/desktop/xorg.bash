@@ -14,8 +14,9 @@ $install xorg-server xorg-setxkbmap xorg-xinput xautolock xss-lock xorg-xclipboa
 local xprofile=/etc/xprofile
 
 echo setxkbmap -layout it > $xprofile
-echo xinput --set-prop 13 \"libinput Accel Speed\" .3  # Thinkpad Trackpad
-echo xinput --set-prop 14 \"libinput Accel Speed\" 1   # Thinkpad Trackpoint
+echo >> $xprofile
+echo xinput --set-prop 13 \"libinput Accel Speed\" .3 >> $xprofile # Thinkpad Trackpad
+echo xinput --set-prop 14 \"libinput Accel Speed\" 1 >> $xprofile  # Thinkpad Trackpoint
 echo >> $xprofile
 echo /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 \& >> $xprofile
 echo >> $xprofile

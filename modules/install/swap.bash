@@ -26,8 +26,7 @@ echo '# swap' >> $fstab
 echo "$swapfile none swap defaults 0 0" >> $fstab
 echo >> $fstab
 
-local filefrag=$($chroot filefrag -v $swapfile)
-local offset=$(echo $filefrag | awk '$1=="0:" {print substr($4, 1, length($4)-2)}')
+local offset=$($chroot filefrag -v $swapfile | awk '$1=="0:" {print substr($4, 1, length($4)-2)}')
 
 enable_resume=yes
 resume_kernel_params=" resume=$root_partition_device resume_offset=$offset"

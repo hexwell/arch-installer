@@ -52,7 +52,7 @@ cd /mn/arch-installer
 ./install.bash
 ```
 
-## Desktop only installation
+## Desktop-only installation
 
 This installer can also be used to install and configure the desktop environment on a pre-existing Arch Linux installation.
 

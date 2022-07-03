@@ -8,13 +8,13 @@ source lib/conf.bash
 #   WPASS    : WiFi passphrase
 #   LOCKER_PKG : Pacman package of locker
 #   LOCKER_CMD : Command of locker
+#   USERNAME : User name
+#   USERPASS : User passphrase
 
 #   EADDR    : Ethernet IP address
 #   EGW      : Ethernet default gateway
 #   DNS_A    : Ethernet DNS
 #   DNS_B    : Ethernet fallback DNS
-#   USERNAME : User name
-#   USERPASS : User passphrase
 
 
 # Module: Base

@@ -9,7 +9,7 @@ utils_module() {
 
 out '[.] Installing utils...'
 
-$install pulseaudio alsa-utils dunst libnotify xdg-utils dmenu alacritty brightnessctl $LOCKER_PKG udisks2 mate-polkit
+$install pulseaudio alsa-utils dunst libnotify xdg-utils dmenu alacritty bash-completion brightnessctl $LOCKER_PKG udisks2 mate-polkit
 
 local install_dir=/usr/local/bin/
 

@@ -1,26 +1,8 @@
 Target abilities:
 
-- Browse the internet (chromium)
+- Browse the internet (chromium/firefox?)
 - Have connection profiles with priorities, like current setup
 
 Additional "packages"/script for:
 
 - Developing, one for each plaform/technology
-
-Arch initial laptop packages list:
-
-- base
-- base-devel?
-- linux (or vmlinuz? need to decide if I want vm support to be native or additional)
-- linux-firmware
-- intel ucode
-- wifi driver (iwlwifi)
-- chromium
-- vim
-- sublime text (activate licence, set configuration)
-- man-db
-- man-pages
-- git
-- zsh? Test agaist bash (i think) to see the difference
-- i3/dwm + config
-- ssh

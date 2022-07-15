@@ -30,3 +30,17 @@ TODO:
 - Wait in a better way for network (-> nm-online), Reflector & ioctl (-> partprobe)
 - Clean up aur user & aur-install?
 - chown $USER .config
+
+
+================================================================================================
+
+
+Checkout:
+
+- https://github.com/picodotdev/alis
+  - https://github.com/picodotdev/alis/blob/master/alis.sh
+  - https://github.com/picodotdev/alis/blob/master/alis.conf
+  - https://github.com/picodotdev/alis/blob/master/alis-packages.conf
+
+- https://github.com/MatMoul/archfi/
+- https://github.com/helmuthdu/aui

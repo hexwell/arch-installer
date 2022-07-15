@@ -1,15 +1,32 @@
-- USB script:
-  Copy repository inside ISO (which will then be flashed on the USB drive), so that no internet connection is needed to download it
-  For this it is probably needed to create a custom ISO, as the official one is read-only.
-  https://wiki.archlinux.org/title/archiso#Adding_files_to_image
-
-- chocolatey windows auto installer (now windows has it's own package manager, maybe look into that)
-- windows version of arch installer usb creator, made with dd from the git chocolatey package
+- Chocolatey Windows auto installer (now windows has it's own package manager, maybe look into that)
+- Windows version of arch installer usb creator, made with dd from the git chocolatey package
   - There is dd in git for windows (cygwin)
   - How to have wget in git for Windows:
       Download: https://eternallybored.org/misc/wget/
       Into: C:\Program Files\Git\mingw64\bin\
 
-- symlink the dotfiles in various places to dotfiles repo directory
-
 - Make a script to install Arch in dual boot w/ Windows, with disk ecnrytpion. Bootloader TBD
+
+================================================================================================
+
+Missing features:
+
+- Automatically clone dotfiles repo
+- fprint (fingerprint reader authentication support)
+- Automatic swap size calculation
+- Having precompiled arch-installer config files in dotfiles repo
+
+Could improve:
+
+- Clipboard persistence
+- Better formatting and encryption
+
+TODO:
+
+- Move NetworkManager installation to desktop.bash?
+- Network? Maybe remove from desktop and also install. Rethink everything. Add static IP to wifi & extract common/shared code.
+- Review config files, try to remove from home
+- Create a function for format_and_mount?
+- Wait in a better way for network (-> nm-online), Reflector & ioctl (-> partprobe)
+- Clean up aur user & aur-install?
+- chown $USER .config

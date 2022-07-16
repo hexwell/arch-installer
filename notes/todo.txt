@@ -30,6 +30,7 @@ TODO:
 - Wait in a better way for network (-> nm-online), Reflector & ioctl (-> partprobe)
 - Clean up aur user & aur-install?
 - chown $USER .config
+- once the text editor is decided, maybe remove Emacs from bashrc (in dotfiles)
 
 
 ================================================================================================

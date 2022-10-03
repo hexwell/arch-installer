@@ -45,3 +45,13 @@ Checkout:
 
 - https://github.com/MatMoul/archfi/
 - https://github.com/helmuthdu/aui
+
+
+TODO:
+Have a look at config directories (.d) for all configurations that are modified in arch-installer.
+You could have single files that override the main config there, instead of modifying the main config.
+(See also: https://stackoverflow.com/questions/47407448/linux-configuration-files-names-with-numbers)
+Moreover, you could modify only the user's config and not the system-wide config.
+
+For example (from https://networkmanager.dev/docs/api/latest/NetworkManager.conf.html):
+If a default NetworkManager.conf is provided by your distribution's packages, you should not modify it, since your changes may get overwritten by package updates. Instead, you can add additional .conf files to the /etc/NetworkManager/conf.d directory. These will be read in order, with later files overriding earlier ones. Packages might install further configuration snippets to /usr/lib/NetworkManager/conf.d. This directory is parsed first, even before NetworkManager.conf. Scripts can also put per-boot configuration into /run/NetworkManager/conf.d. This directory is parsed second, also before NetworkManager.conf. The loading of a file /run/NetworkManager/conf.d/name.conf can be prevented by adding a file /etc/NetworkManager/conf.d/name.conf. Likewise, a file /usr/lib/NetworkManager/conf.d/name.conf can be shadowed by putting a file of the same name to either /etc/NetworkManager/conf.d or /run/NetworkManager/conf.d.

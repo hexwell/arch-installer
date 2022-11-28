@@ -4,9 +4,6 @@ pacstrap_module() {
 
 # IMPORTS:
 #   INSTALLATION_MOUNTPOINT
-#
-# Optionals:
-#   enable_wifi
 
 # EXPORTS:
 #   ucode_kernel_param : Microcode kernel parameter
@@ -29,17 +26,7 @@ identify_cpu AuthenticAMD amd-ucode
 
 [[ -z $ucode ]] || ucode_kernel_param="initrd=\\$ucode.img "
 
-
-set +e
-
-local network=''
-
-[[ -v enable_wifi ]] && local network="$network iwd"
-
-set -e
-
-
-pacstrap $INSTALLATION_MOUNTPOINT base linux linux-firmware $ucode $network networkmanager sudo
+pacstrap $INSTALLATION_MOUNTPOINT base linux linux-firmware $ucode networkmanager sudo
 
 chroot="arch-chroot $INSTALLATION_MOUNTPOINT"
 

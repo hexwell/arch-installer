@@ -45,7 +45,7 @@ fi
 source add_partition.bash
 source format_and_mount.bash
 
-cp --recursive ../../../$REPOSITORY_NAME /mnt
+cp --recursive ../../ /mnt/$REPOSITORY_NAME
 umount /mnt
 
 out '[+] USB ready.'

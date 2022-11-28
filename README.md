@@ -14,6 +14,13 @@ A full Arch Linux installer, from a clean disk to complete desktop installation.
 - i3 window manager
 - yay included
 
+## Requirements
+
+|Script|Requirements|
+|-|-|
+|`debug.bash`|`tmux`|
+|`usb.bash`|`wget`|
+
 ## Creating a USB installation media
 
 ```bash

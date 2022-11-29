@@ -22,7 +22,7 @@ source ../confirm_device.bash
 
 # source ../ethernet.bash
 source ../wifi.bash
-# source ../resolv.bash
+# source ../dns.bash
 source ../check_connection.bash
 source ntp.bash
 

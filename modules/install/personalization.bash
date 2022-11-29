@@ -3,6 +3,7 @@
 personalization_module() {
 
 # IMPORTS:
+#   out
 #   chroot
 #   INSTALLATION_MOUNTPOINT
 #   TZ
@@ -24,14 +25,9 @@ $chroot locale-gen
 $chroot localectl set-locale LANG=$LANG
 $chroot localectl set-keymap --no-convert $KEYBOARD
 
-local hostname=$INSTALLATION_MOUNTPOINT/etc/hostname
-
-echo $HOST > $hostname
-echo >> $hostname
+echo $HOST > $INSTALLATION_MOUNTPOINT/etc/hostname
 
 echo root:$ROOTPASS | $chroot chpasswd
-
-$chroot systemctl enable NetworkManager
 
 }
 

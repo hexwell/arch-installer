@@ -19,8 +19,8 @@ source ../check_root.bash
 # Network
 
 # source ../ethernet.bash
-source ../wifi.bash
-# source ../resolv.bash
+# source ../wifi.bash
+# source ../dns.bash
 source ../check_connection.bash
 
 

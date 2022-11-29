@@ -25,7 +25,6 @@ local bootloader_setup_script=$boot_partition_mountpoint/setup_bootloader.bash
 
 echo '#!/bin/bash' > $bootloader_setup_script
 echo efibootmgr --disk $boot_partition_disk_device --part $boot_partition_number --create --label \"arch linux\" --loader /vmlinuz-linux --unicode \""$encryption_kernel_param"'root='"$root_partition_device"' rw '"$ucode_kernel_param"'initrd=\initramfs-linux.img'"$resume_kernel_params"\" --verbose >> $bootloader_setup_script
-echo >> $bootloader_setup_script
 
 chmod +x $bootloader_setup_script
 

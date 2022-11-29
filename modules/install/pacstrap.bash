@@ -26,7 +26,7 @@ identify_cpu AuthenticAMD amd-ucode
 
 [[ -z $ucode ]] || ucode_kernel_param="initrd=\\$ucode.img "
 
-pacstrap $INSTALLATION_MOUNTPOINT base linux linux-firmware $ucode networkmanager sudo
+pacstrap $INSTALLATION_MOUNTPOINT base linux linux-firmware $ucode
 
 chroot="arch-chroot $INSTALLATION_MOUNTPOINT"
 

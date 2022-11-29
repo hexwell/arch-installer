@@ -15,7 +15,6 @@ local xprofile=/etc/xprofile
 
 echo /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 \& >> $xprofile
 echo >> $xprofile
-echo xautolock -time 11 -locker $LOCKER_CMD \& >> $xprofile
 echo xss-lock $LOCKER_CMD \& >> $xprofile
 
 out '[+] Xorg installed.'

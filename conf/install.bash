@@ -55,7 +55,7 @@ WSSID=x
 WPASS=x
 
 
-# Module: Resolv
+# Module: Dns
 # --- MANDATORY ---
 
 # DNS_A=1.1.1.1

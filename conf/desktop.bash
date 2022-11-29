@@ -4,8 +4,6 @@ source lib/conf.bash
 
 # EXPORTS:
 #   LOGFILE  : Log file
-#   WSSID    : WiFi SSID
-#   WPASS    : WiFi passphrase
 #   LOCKER_PKG : Pacman package of locker
 #   LOCKER_CMD : Command of locker
 #   USERNAME : User name
@@ -13,6 +11,8 @@ source lib/conf.bash
 
 #   EADDR    : Ethernet IP address
 #   EGW      : Ethernet default gateway
+#   WSSID    : WiFi SSID
+#   WPASS    : WiFi passphrase
 #   DNS_A    : Ethernet DNS
 #   DNS_B    : Ethernet fallback DNS
 
@@ -33,11 +33,11 @@ LOGFILE=desktop.log
 # Module: WiFi
 # --- MANDATORY ---
 
-WSSID=x
-WPASS=x
+# WSSID=x
+# WPASS=x
 
 
-# Module: Resolv
+# Module: Dns
 # --- MANDATORY ---
 
 # DNS_A=1.1.1.1

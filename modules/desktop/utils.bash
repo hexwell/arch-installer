@@ -9,7 +9,9 @@ utils_module() {
 
 out '[.] Installing utils...'
 
-$install pulseaudio alsa-utils dunst libnotify xdg-utils dmenu alacritty bash-completion brightnessctl $LOCKER_PKG udisks2 mate-polkit
+$install networkmanager pulseaudio alsa-utils dunst libnotify xdg-utils dmenu alacritty bash-completion brightnessctl $LOCKER_PKG udisks2 mate-polkit
+
+systemctl enable NetworkManager
 
 local install_dir=/usr/local/bin/
 

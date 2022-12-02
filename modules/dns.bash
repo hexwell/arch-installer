@@ -1,6 +1,6 @@
 #!/bin/bash
 
-resolv_module() {
+dns_module() {
 
 # IMPORTS:
 #   DNS_A
@@ -16,4 +16,4 @@ sleep 5
 
 }
 
-resolv_module
+dns_module

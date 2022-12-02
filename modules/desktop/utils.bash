@@ -26,6 +26,8 @@ chmod +x $install_dir/*
 
 sed --in-place '/#HandlePowerKey/s/^#//;s/HandlePowerKey=poweroff/HandlePowerKey=ignore/;/#HandleLidSwitch/s/^#//;s/HandleLidSwitch=suspend/HandleLidSwitch=ignore/' /etc/systemd/logind.conf
 
+sed --in-place '/#Color/s/^#//' /etc/pacman.conf
+
 out '[+] Utils installed.'
 
 }

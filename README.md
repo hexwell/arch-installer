@@ -12,14 +12,14 @@ A full Arch Linux installer, from a clean disk to complete desktop installation.
 - EFISTUB bootloader
 - ly display manager
 - i3 window manager
-- yay included
+- yay includedpresent
 
 ## Requirements
 
 |Script|Requirements|
 |-|-|
 |`debug.bash`|`tmux`|
-|`usb.bash`|`wget`|
+|`usb.bash`|`coreutils`, `wget`|
 
 ## Creating a USB installation media
 

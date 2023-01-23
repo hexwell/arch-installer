@@ -22,8 +22,8 @@ local LOCALE="$LANG UTF-8"
 sed --in-place "/#$LOCALE/s/^#//" $INSTALLATION_MOUNTPOINT/etc/locale.gen
 
 $chroot locale-gen
-$chroot localectl set-locale LANG=$LANG
-$chroot localectl set-keymap --no-convert $KEYBOARD
+echo "LANG=$LANG" > $INSTALLATION_MOUNTPOINT/etc/locale.conf
+echo "KEYMAP=$KEYBOARD" > $INSTALLATION_MOUNTPOINT/etc/vconsole.conf
 
 echo $HOST > $INSTALLATION_MOUNTPOINT/etc/hostname
 

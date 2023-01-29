@@ -9,7 +9,7 @@ utils_module() {
 
 out '[.] Installing utils...'
 
-$install networkmanager pulseaudio udisks2 exfat-utils ntfs-3g dunst libnotify dmenu brightnessctl alacritty bash-completion $LOCKER_PKG xdg-utils mate-polkit chromium
+$install networkmanager pulseaudio udisks2 exfat-utils ntfs-3g dunst libnotify dmenu brightnessctl alacritty bash-completion which man $LOCKER_PKG xdg-utils mate-polkit chromium
 
 systemctl enable NetworkManager
 
